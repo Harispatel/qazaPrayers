@@ -2,14 +2,13 @@
 import React, {useState} from 'react';
 import {View, TextInput, Button, StyleSheet} from 'react-native';
 
-const LoginScreen: React.FC = () => {
+const LoginScreen: React.FC = ({navigation}) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
     // Authentication logic
-    console.warn('Logging in with:', {username, password}),
-    console.log('Logging in with:', {username, password});
+    console.warn('Logging in with:', {username, password});
   };
 
   return (
