@@ -8,14 +8,9 @@
 import React from 'react';
 
 import AppNavigator from './src/navigation/AppNavigator';
-import {NativeBaseProvider} from 'native-base';
 
 function App(): JSX.Element {
-  return (
-    <NativeBaseProvider>
-      <AppNavigator />
-    </NativeBaseProvider>
-  );
+  return <AppNavigator />;
 }
 
 export default App;

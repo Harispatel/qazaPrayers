@@ -6,10 +6,25 @@ const LoginScreen: React.FC = ({navigation}) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
+  // MemoizedComponent using react.memo
+  // const MemoizedComponent = memo(({data}) => {
+  //   console.log(`Rendering MemoizedComponent for data: ${data}`);
+  //   return <View>{data}</View>;
+  // });
+
   const handleLogin = () => {
     // Authentication logic
     console.warn('Logging in with:', {username, password});
   };
+  // UserDetails component
+  // const UserDetails = ({ user }) => {
+  //   return (
+  //     <div>
+  //       <MemoizedComponent data={user.name} />
+  //       <MemoizedComponent data={user.email} />
+  //     </div>
+  //   );
+  // };
 
   return (
     <View style={styles.container}>

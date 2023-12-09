@@ -1,32 +1,82 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {View,  Button, Text} from 'native-base';
-import { STACK } from '../../components/common/stackNames';
-import { CommonActions } from '@react-navigation/native';
+import {CommonActions} from '@react-navigation/native';
+import {ImageBackground, Text, View} from 'react-native';
+
+// Components
+import {STACK} from '../../components/common/stackNames';
+import {COLORS} from '../../components/common/colors';
+import styles from '../../components/common/styles';
+import GpButton from '../../components/elements/GpButton';
+import GpImage from '../../components/elements/GpImage';
+import {txtHead} from '../../components/common/constants';
+import {IMAGES} from '../../assets';
+import GpText from '../../components/elements/GpText';
 
 interface WalkthroughScreenProps {
   navigation: any;
 }
 
-const WalkthroughScreen: React.FC<WalkthroughScreenProps> = ({navigation}) => {
-  const handleContinue = () => {
-    // Navigate to the next walkthrough screen
-    // You can customize the navigation logic based on your requirements
+const Walkthrough3: React.FC<WalkthroughScreenProps> = ({navigation}) => {
+  const handleNext = () => {
     navigation.dispatch(
       CommonActions.reset({
         index: 0,
-        routes: [{ name: STACK.LOGIN }],
-      })
+        routes: [{name: STACK.LOGIN}],
+      }),
+    );
+  };
+  const handlePrevious = () => {
+    navigation.navigate(STACK.WALKTHROUGH2);
+  };
+  const handleSkip = () => {
+    navigation.dispatch(
+      CommonActions.reset({
+        index: 0,
+        routes: [{name: STACK.LOGIN}],
+      }),
     );
   };
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text>Walkthrough Screen 3</Text>
-      <Button onPress={handleContinue} mt={4}>
-        <Text>Continue</Text>
-      </Button>
+    <View style={styles.viewFlex}>
+      <ImageBackground
+        source={IMAGES.BGIMG}
+        resizeMode="cover"
+        style={styles.logo}>
+          <GpButton
+            onPress={handlePrevious}
+            style={{
+              ...styles.prevBtn,
+            }}>
+            <Text style={styles.prvTxt}>➤</Text>
+          </GpButton>
+        </ImageBackground>
+        <View>
+      <GpImage style={styles.logo} resizeMode="contain" source={IMAGES.COMMUNITY} />
+      <GpText type={txtHead.heading2} style={styles.description}>Some Content Walkthrough 3</GpText>
+        </View>
+      <View style={styles.walkthroughContainer}>
+        <View style={styles.rowDirection}>
+          <GpButton
+            onPress={handleSkip}
+            style={{
+              ...styles.skipBtn,
+            }}>
+            <Text style={styles.skTxt}>Skip</Text>
+          </GpButton>
+          <GpButton
+            onPress={handleNext}
+            style={{
+              ...styles.nextBtn,
+              color: COLORS.white.default,
+              backgroundColor: COLORS.green.default,
+            }}>
+            <Text style={styles.wkTxt}>Next</Text>
+          </GpButton>
+        </View>
+      </View>
     </View>
   );
 };
 
-export default WalkthroughScreen;
+export default Walkthrough3;
