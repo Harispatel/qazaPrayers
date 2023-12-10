@@ -1,20 +1,18 @@
 /* eslint-disable prettier/prettier */
+// src/screens/SignUp.tsx
 import React, {useState} from 'react';
 import {View, TextInput, Button, StyleSheet} from 'react-native';
-import { STACK } from '../components/common/stackNames';
 
-const LoginScreen: React.FC = ({navigation}) => {
+const SignUp: React.FC = () => {
   const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-    const handleLogin = () => {
-    // Authentication logic
-    console.warn('Logging in with:', {username, password});
+  const handleSignUp = () => {
+    // Implement your signup logic here
+    console.log('Signing up with:', {username, email, password});
+    // You can add your signup logic (e.g., API calls) here
   };
-const handleNavigateSignup=()=>{
-  navigation.navigate(STACK.SIGN_UP)
-}
-  
 
   return (
     <View style={styles.container}>
@@ -26,13 +24,19 @@ const handleNavigateSignup=()=>{
       />
       <TextInput
         style={styles.input}
+        placeholder="Email"
+        value={email}
+        onChangeText={text => setEmail(text)}
+        keyboardType="email-address"
+      />
+      <TextInput
+        style={styles.input}
         placeholder="Password"
-        secureTextEntry
         value={password}
         onChangeText={text => setPassword(text)}
+        secureTextEntry
       />
-      <Button title="Login" onPress={handleLogin} />
-      <Button title="Sign up" onPress={handleNavigateSignup} />
+      <Button title="Sign Up" onPress={handleSignUp} />
     </View>
   );
 };
@@ -54,4 +58,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LoginScreen;
+export default SignUp;

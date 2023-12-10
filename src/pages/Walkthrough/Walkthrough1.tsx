@@ -8,10 +8,8 @@ import {STACK} from '../../components/common/stackNames';
 import {COLORS} from '../../components/common/colors';
 import styles from '../../components/common/styles';
 import GpButton from '../../components/elements/GpButton';
-import GpImage from '../../components/elements/GpImage';
-import {txtHead} from '../../components/common/constants';
 import {IMAGES} from '../../assets';
-import GpText from '../../components/elements/GpText';
+import WkContainer from '../../components/wlkthContent';
 
 interface WalkthroughScreenProps {
   navigation: any;
@@ -35,16 +33,10 @@ const Walkthrough1: React.FC<WalkthroughScreenProps> = ({navigation}) => {
         source={IMAGES.BGIMG}
         resizeMode="cover"
         style={styles.logo}></ImageBackground>
-      <View>
-        <GpImage
-          style={styles.logo}
-          resizeMode="contain"
-          source={IMAGES.COMMUNITY}
-        />
-        <GpText type={txtHead.heading2} style={styles.description}>
-          Some Content Walkthrough 1
-        </GpText>
-      </View>
+      <WkContainer
+        image={IMAGES.COMMUNITY}
+        text={'Some Content Walkthrough 1'}
+      />
       <View style={styles.walkthroughContainer}>
         <View style={styles.rowDirection}>
           <GpButton

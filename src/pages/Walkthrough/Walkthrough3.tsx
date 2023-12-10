@@ -12,6 +12,7 @@ import GpImage from '../../components/elements/GpImage';
 import {txtHead} from '../../components/common/constants';
 import {IMAGES} from '../../assets';
 import GpText from '../../components/elements/GpText';
+import WkContainer from '../../components/wlkthContent';
 
 interface WalkthroughScreenProps {
   navigation: any;
@@ -43,18 +44,18 @@ const Walkthrough3: React.FC<WalkthroughScreenProps> = ({navigation}) => {
         source={IMAGES.BGIMG}
         resizeMode="cover"
         style={styles.logo}>
-          <GpButton
-            onPress={handlePrevious}
-            style={{
-              ...styles.prevBtn,
-            }}>
-            <Text style={styles.prvTxt}>➤</Text>
-          </GpButton>
-        </ImageBackground>
-        <View>
-      <GpImage style={styles.logo} resizeMode="contain" source={IMAGES.COMMUNITY} />
-      <GpText type={txtHead.heading2} style={styles.description}>Some Content Walkthrough 3</GpText>
-        </View>
+        <GpButton
+          onPress={handlePrevious}
+          style={{
+            ...styles.prevBtn,
+          }}>
+          <Text style={styles.prvTxt}>➤</Text>
+        </GpButton>
+      </ImageBackground>
+      <WkContainer
+        image={IMAGES.COMMUNITY}
+        text={'Some Content Walkthrough 3'}
+      />
       <View style={styles.walkthroughContainer}>
         <View style={styles.rowDirection}>
           <GpButton
