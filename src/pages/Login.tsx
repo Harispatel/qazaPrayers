@@ -11,7 +11,7 @@ const LoginScreen: React.FC = ({navigation}) => {
     // Authentication logic
     console.warn('Logging in with:', {username, password});
   };
-const handleNavigateSignup=()=>{
+const handleNavigate=()=>{
   navigation.navigate(STACK.SIGN_UP)
 }
   
@@ -32,7 +32,7 @@ const handleNavigateSignup=()=>{
         onChangeText={text => setPassword(text)}
       />
       <Button title="Login" onPress={handleLogin} />
-      <Button title="Sign up" onPress={handleNavigateSignup} />
+      <Button title="Sign up" onPress={handleNavigate} />
     </View>
   );
 };

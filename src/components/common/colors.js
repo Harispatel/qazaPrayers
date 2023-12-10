@@ -1,25 +1,77 @@
 /* eslint-disable prettier/prettier */
 export const COLORS = {
-  black: {
-    default: '#232323',
-    absolute: '#000000',
-  },
+  PRIMARY: '#3456FF',
 
-  white: {
-    default: '#ffffff',
-  },
+  PRIMARY_BACKGROND: '#3456FF20',
 
-  blue: {
-    default: '#004d79',
-    alt1: '#1d84c4',
-    alt2: '#0083f9',
-  },
+  SECONDARY: '#FFDD34',
 
-  cyan: {
-    default: '#7ae2ff',
-  },
+  ERROR: '#FF5652',
 
-  green: {
-    default: '#5b9675',
-  },
+  SUCCESS: '#1ECD8C',
+
+  SUCCESS_BG: '#1ECD8C19',
+
+  PRIMARY_BG: '#3456FF19',
+
+  PRIMARY_TXT: '#070928',
+
+  STRENGTH_METER_BG: '#07092810',
+
+  SECONDARY_TXT: '#606060',
+
+  LIGHT_GREY: '#E0E0E0',
+
+  DIVIDER: '#888888',
+
+  BG_OFF_WHITE: '#f8f8f8',
+
+  ORANGE: '#F29355',
+
+  OFFWHITE: '#FAFAFA',
+
+  WHITE: '#FFFFFF',
+
+  GREEN: '#2CAE4E',
+
+  BRIGHT_PURPLE: '#8244FF',
+
+  NEON_GREEN: '#C1FF44',
+
+  OCEAN_BLUE: '#6574D3',
+
+  BRIGHT_ORANGE: '#FF7D1F',
+
+  HAWAIIANBEEZE: '#73D0E1',
+
+  ROSE: '#FF516E',
+
+  NOTIFICATIONS: '#FF3456',
+
+  GREEN100: '#67D383',
+
+  DESERT_SAND: '#EBD0A8',
+
+  BLACK: '#000000',
+
+  NAVBAR_DIVIDER: '#F2F2F2',
+
+  SECONDARY_BUTTON: '#6A5E5E',
+
+  desciptionTxt: '#00000008',
+
+  PRIMARY_BLUE: '#1FA1FF',
+
+  LIGTH_BLUE: '#55B4F2',
+
+  LIGHT_GREEN: '#BCF0DD',
+
+  BAGE_LIGTH_BLUE: '#73d0e1',
+
+  TRANSPARENT: '#00000000',
+
+
+  SKY_BLUE: '#31E4F4',
+
+  GRADIENT_END: 'rgba(0, 0, 0, 0.35)',
 };

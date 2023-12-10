@@ -10,6 +10,7 @@ import styles from '../../components/common/styles';
 import GpButton from '../../components/elements/GpButton';
 import {IMAGES} from '../../assets';
 import WkContainer from '../../components/wlkthContent';
+import GpText from '../../components/elements/GpText';
 
 interface WalkthroughScreenProps {
   navigation: any;
@@ -41,20 +42,21 @@ const Walkthrough1: React.FC<WalkthroughScreenProps> = ({navigation}) => {
         <View style={styles.rowDirection}>
           <GpButton
             onPress={handleSkip}
+            type={"text"}
             style={{
               ...styles.skipBtn,
             }}>
             <Text style={styles.skTxt}>Skip</Text>
           </GpButton>
           <GpButton
-            onPress={handleNext}
-            style={{
-              ...styles.nextBtn,
-              color: COLORS.white.default,
-              backgroundColor: COLORS.green.default,
-            }}>
-            <Text style={styles.wkTxt}>Next</Text>
-          </GpButton>
+          onPress={() => handleNext()}
+          type={"contained"}
+          style={{...styles.nextBtn,backgroundColor:COLORS.SUCCESS}}
+        >
+          <GpText type={"buttonText"} style={{ color: COLORS.WHITE }}>
+            Next
+          </GpText>
+        </GpButton>
         </View>
       </View>
     </View>
