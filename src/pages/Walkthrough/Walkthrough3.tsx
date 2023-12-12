@@ -5,12 +5,10 @@ import {ImageBackground, Text, View} from 'react-native';
 
 // Components
 import {STACK} from '../../components/common/stackNames';
-import {COLORS} from '../../components/common/colors';
 import styles from '../../components/common/styles';
 import GpButton from '../../components/elements/GpButton';
 import {IMAGES} from '../../assets';
 import WkContainer from '../../components/wlkthContent';
-import GpIcons from '../../components/elements/GpIcons';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 interface WalkthroughScreenProps {

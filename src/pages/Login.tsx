@@ -2,10 +2,13 @@
 import React, {useState} from 'react';
 import {View, Button, StyleSheet} from 'react-native';
 import {TextInput} from 'react-native-paper';
+
+// Components
 import {STACK} from '../components/common/stackNames';
 import GpTextInput from '../components/elements/GpTextInput';
-import GpButton from '../components/elements/GpButton';
-import GpText from '../components/elements/GpText';
+// import GpButton from '../components/elements/GpButton';
+// import GpText from '../components/elements/GpText';
+import {GpButton, GpText} from '../components/elements';
 import {btnTypes, emailRegex} from '../components/common/constants';
 import {COLORS} from '../components/common/colors';
 
@@ -23,7 +26,7 @@ const LoginScreen: React.FC = ({navigation}) => {
     // Authentication logic
     if (!username || emailRegex.test(username) === false) {
       setError({...error, emailError: true});
-      console.log("PLESE ENTER USER NAME")
+      console.log('PLESE ENTER USER NAME');
       return;
     }
     console.warn('Logging in with:', {username, password});
