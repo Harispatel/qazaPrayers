@@ -7,12 +7,12 @@ import { Constants, width } from './constants';
 
 export default StyleSheet.create({
   titleContainer: {
-    backgroundColor: COLORS.green,
+    backgroundColor: COLORS.GREEN,
     padding: Constants.GAP,
   },
 
   title: Object.assign({}, Typography.heading3, {
-    color: COLORS.black,
+    color: COLORS.BLACK,
   }),
 
   contentContainer: {
@@ -20,22 +20,18 @@ export default StyleSheet.create({
   },
 
   content: Object.assign({}, Typography.bodyText),
-  nextBtn: {
-    padding: 15,
-    paddingLeft: 25,
-    borderBottomStartRadius: 30,
-    borderTopStartRadius: 30,
+  nextBtn:{
+    borderBottomStartRadius:30,
+    borderTopStartRadius:30,
   },
-  skipBtn: {
-    marginRight: width - 150,
-    padding: 15,
-    paddingLeft: 25,
-    color: COLORS.black.absolute,
+  skipBtn:{
+    marginRight:width-150,
+    color:COLORS.BLACK,
   },
-  prevBtn: {
-    width: 60,
-    borderRadius: 50,
-    padding: 5,
+  prevBtn:{
+    width:60,
+    borderRadius:50,
+    padding:5,
   },
   // Walkthrough Styling
   walkthroughContainer: {
@@ -47,17 +43,17 @@ export default StyleSheet.create({
     alignItems: 'flex-end',
   },
   wkTxt: {
-    color: COLORS.white.default,
+    color: COLORS.WHITE,
   },
   skTxt: {
-    color: COLORS.black.absolute,
+    color: COLORS.BLACK,
   },
   prvTxt: {
-    color: COLORS.green.default,
-    transform: [{rotate: '180deg'}],
-    marginTop: 10,
-    fontSize: 30,
-    textAlign: 'center',
+    color: COLORS.GREEN,
+    transform: [{ rotate: '180deg'}],
+    marginTop:10,
+    fontSize:30,
+    textAlign:'center'
   },
 
   logo: {

@@ -69,8 +69,8 @@ const Walkthrough3: React.FC<WalkthroughScreenProps> = ({navigation}) => {
             onPress={handleNext}
             style={{
               ...styles.nextBtn,
-              color: COLORS.white.default,
-              backgroundColor: COLORS.green.default,
+              color: COLORS.WHITE,
+              backgroundColor: COLORS.SUCCESS,
             }}>
             <Text style={styles.wkTxt}>Next</Text>
           </GpButton>
