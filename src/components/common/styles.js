@@ -1,9 +1,9 @@
 /* eslint-disable prettier/prettier */
 import {StyleSheet} from 'react-native';
 
-import { COLORS } from './colors';
-import { Typography } from './typography';
-import { Constants, width } from './constants';
+import {COLORS} from './colors';
+import {Typography} from './typography';
+import {Constants, width} from './constants';
 
 export default StyleSheet.create({
   titleContainer: {
@@ -20,25 +20,25 @@ export default StyleSheet.create({
   },
 
   content: Object.assign({}, Typography.bodyText),
-  nextBtn:{
-    borderBottomStartRadius:30,
-    borderTopStartRadius:30,
+  nextBtn: {
+    borderBottomStartRadius: 30,
+    borderTopStartRadius: 30,
   },
-  skipBtn:{
-    marginRight:width-150,
-    color:COLORS.BLACK,
+  skipBtn: {
+    marginRight: width - 150,
+    color: COLORS.BLACK,
   },
-  prevBtn:{
-    width:60,
-    borderRadius:50,
-    padding:5,
+  prevBtn: {
+    width: 60,
+    borderRadius: 50,
+    padding: 5,
   },
   // Walkthrough Styling
-  walkthroughContainer:{
+  walkthroughContainer: {
     flex: 1,
     flexDirection: 'row',
     width: '100%',
-    paddingBottom:20,
+    paddingBottom: 20,
     justifyContent: 'flex-end',
     alignItems: 'flex-end',
   },
@@ -50,25 +50,23 @@ export default StyleSheet.create({
   },
   prvTxt: {
     color: COLORS.GREEN,
-    transform: [{ rotate: '180deg'}],
-    marginTop:10,
-    fontSize:30,
-    textAlign:'center'
+    marginTop: 10,
+    fontSize: 20,
+    textAlign: 'center',
   },
-  
+
   logo: {
     width: width,
     height: 250,
   },
-  description:{
-    textAlign:'center'
+  description: {
+    textAlign: 'center',
   },
   // Common Styling
-  rowDirection:{
-    flexDirection: 'row'
+  rowDirection: {
+    flexDirection: 'row',
   },
-  viewFlex:{
-    flex: 1
-  }
-
+  viewFlex: {
+    flex: 1,
+  },
 });

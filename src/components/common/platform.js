@@ -35,18 +35,18 @@ export const heightPercentageToDP = heightPercent => {
   return PixelRatio.roundToNearestPixel((screenHeight * elemHeight) / 100);
 };
 
-export const listenOrientationChange = that => {
-  Dimensions.addEventListener('change', newDimensions => {
-    // Retrieve and save new dimensions
-    screenWidth = newDimensions.window.width;
-    screenHeight = newDimensions.window.height;
+// export const listenOrientationChange = that => {
+//   Dimensions.addEventListener('change', newDimensions => {
+//     // Retrieve and save new dimensions
+//     screenWidth = newDimensions.window.width;
+//     screenHeight = newDimensions.window.height;
 
-    // Trigger screen's rerender with a state update of the orientation variable
-    that.setState({
-      orientation: screenWidth < screenHeight ? 'portrait' : 'landscape',
-    });
-  });
-};
+//     // Trigger screen's rerender with a state update of the orientation variable
+//     that.setState({
+//       orientation: screenWidth < screenHeight ? 'portrait' : 'landscape',
+//     });
+//   });
+// };
 
 export const removeOrientationListener = () => {
   Dimensions.removeEventListener('change', () => {});

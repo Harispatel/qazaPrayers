@@ -30,7 +30,7 @@ const btnStyle = StyleSheet.create({
     textAlign: 'center',
     justifyContent: 'center',
     height: 46,
-    borderRadius: 24,
+    // borderRadius: 24,
     // margin: normalize(8),
   },
 });
