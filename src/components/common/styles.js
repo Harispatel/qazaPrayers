@@ -34,11 +34,11 @@ export default StyleSheet.create({
     padding:5,
   },
   // Walkthrough Styling
-  walkthroughContainer:{
+  walkthroughContainer: {
     flex: 1,
     flexDirection: 'row',
     width: '100%',
-    paddingBottom:20,
+    paddingBottom: 20,
     justifyContent: 'flex-end',
     alignItems: 'flex-end',
   },
@@ -55,20 +55,77 @@ export default StyleSheet.create({
     fontSize:30,
     textAlign:'center'
   },
-  
+
   logo: {
     width: width,
     height: 250,
   },
-  description:{
-    textAlign:'center'
+  description: {
+    textAlign: 'center',
   },
   // Common Styling
-  rowDirection:{
-    flexDirection: 'row'
+  rowDirection: {
+    flexDirection: 'row',
   },
-  viewFlex:{
-    flex: 1
-  }
-
+  viewFlex: {
+    flex: 1,
+  },
+  textBlack: {
+    color: 'black',
+  },
+  textInput: {
+    borderWidth: 1,
+    borderColor: 'white',
+    width: '100%',
+    height: 60,
+    backgroundColor: '#CDCDCD',
+    borderRadius: 8,
+    paddingHorizontal: 10,
+    fontSize: 18,
+  },
+  buttonDark: {
+    backgroundColor: '#4D4D4D',
+    width: '100%',
+    height: 60,
+    borderRadius: 50,
+  },
+  buttonDarkText: {
+    textAlign: 'center',
+    marginVertical: 15,
+    color: 'white',
+  },
+  semiBold: {
+    fontWeight: '800',
+  },
+  textLG: {
+    fontSize: 20,
+  },
+  textMD: {
+    fontSize: 15,
+  },
+  mt45: {
+    marginVertical: 45,
+  },
+  mt15: {
+    marginVertical: 15,
+  },
+  signUpIcon: {
+    width: 60,
+    height: 60,
+  },
+  flex: {
+    flexDirection: 'row',
+  },
+  justifyContentEvenly: {
+    justifyContent: 'space-evenly',
+  },
+  justifyContentCenter: {
+    justifyContent: 'center',
+  },
+  gap4: {
+    gap: 30,
+  },
+  gap1: {
+    gap: 5,
+  },
 });

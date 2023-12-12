@@ -1,5 +1,5 @@
 import React from 'react';
-import {Linking, Text} from 'react-native';
+import {Text} from 'react-native';
 import {Typography} from '../common/typography';
 import {txtHead} from '../common/constants';
 
