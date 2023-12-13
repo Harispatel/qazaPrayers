@@ -63,9 +63,6 @@ export default StyleSheet.create({
     textAlign: 'center',
   },
   // Common Styling
-  rowDirection: {
-    flexDirection: 'row',
-  },
   viewFlex: {
     flex: 1,
   },
@@ -112,6 +109,11 @@ export default StyleSheet.create({
     width: 60,
     height: 60,
   },
+  loginIcon: {
+    width: 60,
+    height: 60,
+    borderRadius: 10,
+  },
   flex: {
     flexDirection: 'row',
   },
@@ -126,5 +128,11 @@ export default StyleSheet.create({
   },
   gap1: {
     gap: 5,
+  },
+  colorSuccess: {
+    color: COLORS.SUCCESS,
+  },
+  colorGrey: {
+    color: COLORS.DARK_GREY,
   },
 });

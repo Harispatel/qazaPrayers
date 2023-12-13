@@ -1,24 +1,26 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import {View} from 'react-native';
-import GpImage from './elements/GpImage';
+import {GpButton, GpText} from '../components/elements';
 import styles from './common/styles';
 import {btnTypes, txtHead} from './common/constants';
-import GpText from './elements/GpText';
-import GpButton from './elements/GpButton';
-import { COLORS } from './common/colors';
+import {COLORS} from './common/colors';
 
 export default function WkContainer(props) {
   return (
     <>
-    <View>
-      <GpImage style={styles.logo} resizeMode="contain" source={props?.image} />
-      <GpText type={txtHead.heading2} style={styles.description}>
-        {props.text}
-      </GpText>
-    </View>
-    <View style={styles.walkthroughContainer}>
-        <View style={styles.rowDirection}>
+      <View>
+        <GpImage
+          style={styles.logo}
+          resizeMode="contain"
+          source={props?.image}
+        />
+        <GpText type={txtHead.heading2} style={styles.description}>
+          {props.text}
+        </GpText>
+      </View>
+      <View style={styles.walkthroughContainer}>
+        <View style={styles.flex}>
           <GpButton
             type={btnTypes.text}
             onPress={props?.handleSkip}
@@ -39,6 +41,6 @@ export default function WkContainer(props) {
           </GpButton>
         </View>
       </View>
-  </>
+    </>
   );
 }

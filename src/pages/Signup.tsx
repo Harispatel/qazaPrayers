@@ -1,19 +1,14 @@
 /* eslint-disable prettier/prettier */
-import {Text, View, TextInput, TouchableOpacity, Image} from 'react-native';
-import React, {Component, useState} from 'react';
+import {Text, View, TouchableOpacity, Image} from 'react-native';
+import React, {useState} from 'react';
 import styles from '../components/common/styles';
-import GpText from '../components/elements/GpText';
+import {GpButton, GpText, GpTextInput} from '../components/elements';
 import {btnTypes, txtHead} from '../components/common/constants';
-import GpTextInput from '../components/elements/GpTextInput';
-import GpButton from '../components/elements/GpButton';
 
 const SignupScreen: React.FC = ({navigation}) => {
   const [firstname, setFirstname] = useState('');
   return (
     <View style={[styles.contentContainer]}>
-      {/* <Text style={[styles.semiBold, styles.textBlack, styles.textLG]}>
-
-        </Text> */}
       <GpText
         type={txtHead.heading3}
         style={[styles.semiBold, styles.textBlack, styles.textLG]}>
@@ -25,11 +20,6 @@ const SignupScreen: React.FC = ({navigation}) => {
         Let's get Start?
       </GpText>
       <View style={[styles.mt45]}>
-        {/* <TextInput
-          style={[styles.textInput, styles.mt15]}
-          keyboardType="number-pad"
-          placeholder="Enter your Phone Number"
-        /> */}
         <GpTextInput
           keyboardType="number-pad"
           style={[styles.textInput, styles.mt15]}

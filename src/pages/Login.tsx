@@ -1,16 +1,15 @@
 /* eslint-disable prettier/prettier */
 import React, {useState} from 'react';
-import {View, Button, StyleSheet} from 'react-native';
+import {View, Pressable} from 'react-native';
 import {TextInput} from 'react-native-paper';
 
 // Components
 import {STACK} from '../components/common/stackNames';
-import GpTextInput from '../components/elements/GpTextInput';
-// import GpButton from '../components/elements/GpButton';
-// import GpText from '../components/elements/GpText';
-import {GpButton, GpText} from '../components/elements';
-import {btnTypes, emailRegex} from '../components/common/constants';
-import {COLORS} from '../components/common/colors';
+import {GpButton, GpText, GpTextInput} from '../components/elements';
+import {btnTypes, emailRegex, txtHead} from '../components/common/constants';
+import styles from '../components/common/styles';
+import GpImage from '../components/elements/GpImage';
+import {IMAGES} from '../assets';
 
 const LoginScreen: React.FC = ({navigation}) => {
   const [username, setUsername] = useState('');
@@ -24,6 +23,7 @@ const LoginScreen: React.FC = ({navigation}) => {
 
   const handleLogin = () => {
     // Authentication logic
+    console.log('LOGIN CALLED');
     if (!username || emailRegex.test(username) === false) {
       setError({...error, emailError: true});
       console.log('PLESE ENTER USER NAME');
@@ -36,69 +36,81 @@ const LoginScreen: React.FC = ({navigation}) => {
   };
 
   return (
-    <View style={styles.container}>
-      {/* <TextInput
-        style={styles.input}
-        placeholder="Username"
-        value={username}
-        onChangeText={text => setUsername(text)}
-      /> */}
-      <GpTextInput
-        style={styles.input}
-        label={'Username'}
-        onChangeText={text => setUsername(text)}
-      />
-      <GpTextInput
-        style={styles.input}
-        label={'Enter Password'}
-        // value={state.password}
-        returnKeyType="done"
-        // error={error.passwordError}
-        right={
-          // state.secureText ? (
-          <TextInput.Icon
-            name={secureText ? 'eye' : 'eye-off'}
-            onPress={() => setSecureText(!secureText)}
-          />
-        }
-        secureTextEntry={secureText}
-        onChangeText={text => {
-          setPassword(text);
-        }}
-      />
-      <GpButton
-        type={btnTypes.contained}
-        onPress={handleLogin}
-        style={{
-          ...styles.loginBtn,
-          color: COLORS.WHITE,
-          backgroundColor: COLORS.SUCCESS,
-        }}>
-        <GpText>login</GpText>
-      </GpButton>
-      <GpButton type={btnTypes.text} onPress={handleNavigate}>
-        <GpText>Dont have account? Sign up here</GpText>
-      </GpButton>
+    <View style={styles.contentContainer}>
+      <GpText
+        type={txtHead.heading3}
+        style={[styles.semiBold, styles.textBlack, styles.textLG]}>
+        Welcome {'\n'}back!
+      </GpText>
+      <View style={[styles.mt45]}>
+        <GpTextInput
+          // keyboardType="number-pad"
+          style={[styles.textInput, styles.mt15]}
+          label={'Enter Email id'}
+          onChangeText={text => setUsername(text)}
+        />
+        <GpTextInput
+          style={styles.textInput}
+          label={'Enter Password'}
+          // value={state.password}
+          returnKeyType="done"
+          // error={error.passwordError}
+          right={
+            // state.secureText ? (
+            <TextInput.Icon
+              icon={secureText ? 'eye' : 'eye-off'}
+              onPress={() => setSecureText(!secureText)}
+            />
+          }
+          secureTextEntry={secureText}
+          onChangeText={text => {
+            setPassword(text);
+          }}
+        />
+        <GpButton type={btnTypes.text} onPress={handleNavigate}>
+          <GpText style={styles.colorSuccess}>Forgot Password</GpText>
+        </GpButton>
+        <GpButton
+          style={[styles.buttonDark, styles.mt15]}
+          onPress={() => handleLogin}>
+          <GpText
+            style={[
+              styles.textBlack,
+              styles.buttonDarkText,
+              styles.textLG,
+              styles.semiBold,
+            ]}>
+            LOGIN
+          </GpText>
+        </GpButton>
+        <View
+          style={[
+            styles.mt15,
+            styles.flex,
+            styles.justifyContentCenter,
+            styles.gap4,
+          ]}>
+          <Pressable onPress={() => console.log('Clicked Google Icon')}>
+            <GpImage
+              style={styles.loginIcon}
+              source={{uri: IMAGES.GOOGLE}}
+              accessibilityLabel="AppleStore"
+            />
+          </Pressable>
+          <Pressable onPress={() => console.log('Clicked Facebook Icon')}>
+            <GpImage
+              style={styles.loginIcon}
+              source={{uri: IMAGES.FACEBOOK}}
+              accessibilityLabel="AppleStore"
+            />
+          </Pressable>
+        </View>
+        <GpButton type={btnTypes.text} onPress={handleNavigate}>
+          <GpText style={styles.colorGrey}>New User? SIGNUP</GpText>
+        </GpButton>
+      </View>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 16,
-  },
-  input: {
-    // height: 40,
-    width: '100%',
-    borderColor: 'gray',
-    borderWidth: 1,
-    marginBottom: 16,
-    paddingVertical: 0,
-  },
-  loginBtn: {},
-});
 
 export default LoginScreen;
