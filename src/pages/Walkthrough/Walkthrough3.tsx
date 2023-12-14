@@ -5,14 +5,11 @@ import {ImageBackground, Text, View} from 'react-native';
 
 // Components
 import {STACK} from '../../components/common/stackNames';
-import {COLORS} from '../../components/common/colors';
 import styles from '../../components/common/styles';
 import GpButton from '../../components/elements/GpButton';
-import GpImage from '../../components/elements/GpImage';
-import {txtHead} from '../../components/common/constants';
 import {IMAGES} from '../../assets';
-import GpText from '../../components/elements/GpText';
 import WkContainer from '../../components/wlkthContent';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 interface WalkthroughScreenProps {
   navigation: any;
@@ -49,33 +46,22 @@ const Walkthrough3: React.FC<WalkthroughScreenProps> = ({navigation}) => {
           style={{
             ...styles.prevBtn,
           }}>
-          <Text style={styles.prvTxt}>➤</Text>
+          <Ionicons
+            testID="nextButton"
+            name="arrow-forward"
+            color="rgba(255, 255, 255, .9)"
+            size={44}
+            style={{backgroundColor: 'transparent'}}
+          />
         </GpButton>
       </ImageBackground>
       <WkContainer
         image={IMAGES.COMMUNITY}
         text={'Some Content Walkthrough 3'}
+        handleNext={handleNext}
+        handleSkip={handleSkip}
+        handlePrevious={handlePrevious}
       />
-      <View style={styles.walkthroughContainer}>
-        <View style={styles.rowDirection}>
-          <GpButton
-            onPress={handleSkip}
-            style={{
-              ...styles.skipBtn,
-            }}>
-            <Text style={styles.skTxt}>Skip</Text>
-          </GpButton>
-          <GpButton
-            onPress={handleNext}
-            style={{
-              ...styles.nextBtn,
-              color: COLORS.WHITE,
-              backgroundColor: COLORS.SUCCESS,
-            }}>
-            <Text style={styles.wkTxt}>Next</Text>
-          </GpButton>
-        </View>
-      </View>
     </View>
   );
 };

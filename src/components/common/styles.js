@@ -1,9 +1,9 @@
 /* eslint-disable prettier/prettier */
 import {StyleSheet} from 'react-native';
 
-import { COLORS } from './colors';
-import { Typography } from './typography';
-import { Constants, width } from './constants';
+import {COLORS} from './colors';
+import {Typography} from './typography';
+import {Constants, width} from './constants';
 
 export default StyleSheet.create({
   titleContainer: {
@@ -20,18 +20,18 @@ export default StyleSheet.create({
   },
 
   content: Object.assign({}, Typography.bodyText),
-  nextBtn:{
-    borderBottomStartRadius:30,
-    borderTopStartRadius:30,
+  nextBtn: {
+    borderBottomStartRadius: 30,
+    borderTopStartRadius: 30,
   },
-  skipBtn:{
-    marginRight:width-150,
-    color:COLORS.BLACK,
+  skipBtn: {
+    marginRight: width - 150,
+    color: COLORS.BLACK,
   },
-  prevBtn:{
-    width:60,
-    borderRadius:50,
-    padding:5,
+  prevBtn: {
+    width: 60,
+    borderRadius: 50,
+    padding: 5,
   },
   // Walkthrough Styling
   walkthroughContainer: {
@@ -50,10 +50,9 @@ export default StyleSheet.create({
   },
   prvTxt: {
     color: COLORS.GREEN,
-    transform: [{ rotate: '180deg'}],
-    marginTop:10,
-    fontSize:30,
-    textAlign:'center'
+    marginTop: 10,
+    fontSize: 20,
+    textAlign: 'center',
   },
 
   logo: {
@@ -64,9 +63,6 @@ export default StyleSheet.create({
     textAlign: 'center',
   },
   // Common Styling
-  rowDirection: {
-    flexDirection: 'row',
-  },
   viewFlex: {
     flex: 1,
   },
@@ -113,6 +109,11 @@ export default StyleSheet.create({
     width: 60,
     height: 60,
   },
+  loginIcon: {
+    width: 60,
+    height: 60,
+    borderRadius: 10,
+  },
   flex: {
     flexDirection: 'row',
   },
@@ -127,5 +128,11 @@ export default StyleSheet.create({
   },
   gap1: {
     gap: 5,
+  },
+  colorSuccess: {
+    color: COLORS.SUCCESS,
+  },
+  colorGrey: {
+    color: COLORS.DARK_GREY,
   },
 });

@@ -1,57 +1,116 @@
 /* eslint-disable prettier/prettier */
 import React, {useState} from 'react';
-import {View, TextInput, Button, StyleSheet} from 'react-native';
-import { STACK } from '../components/common/stackNames';
+import {View, Pressable} from 'react-native';
+import {TextInput} from 'react-native-paper';
+
+// Components
+import {STACK} from '../components/common/stackNames';
+import {GpButton, GpText, GpTextInput} from '../components/elements';
+import {btnTypes, emailRegex, txtHead} from '../components/common/constants';
+import styles from '../components/common/styles';
+import GpImage from '../components/elements/GpImage';
+import {IMAGES} from '../assets';
 
 const LoginScreen: React.FC = ({navigation}) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [secureText, setSecureText] = useState(true);
 
-    const handleLogin = () => {
+  const [error, setError] = useState({
+    emailError: false,
+    passwordError: false,
+  });
+
+  const handleLogin = () => {
     // Authentication logic
+    console.log('LOGIN CALLED');
+    if (!username || emailRegex.test(username) === false) {
+      setError({...error, emailError: true});
+      console.log('PLESE ENTER USER NAME');
+      return;
+    }
     console.warn('Logging in with:', {username, password});
   };
-const handleNavigate=()=>{
-  navigation.navigate(STACK.SIGN_UP)
-}
-  
+  const handleNavigate = () => {
+    navigation.navigate(STACK.SIGN_UP);
+  };
 
   return (
-    <View style={styles.container}>
-      <TextInput
-        style={styles.input}
-        placeholder="Username"
-        value={username}
-        onChangeText={text => setUsername(text)}
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Password"
-        secureTextEntry
-        value={password}
-        onChangeText={text => setPassword(text)}
-      />
-      <Button title="Login" onPress={handleLogin} />
-      <Button title="Sign up" onPress={handleNavigate} />
+    <View style={styles.contentContainer}>
+      <GpText
+        type={txtHead.heading3}
+        style={[styles.semiBold, styles.textBlack, styles.textLG]}>
+        Welcome {'\n'}back!
+      </GpText>
+      <View style={[styles.mt45]}>
+        <GpTextInput
+          // keyboardType="number-pad"
+          style={[styles.textInput, styles.mt15]}
+          label={'Enter Email id'}
+          onChangeText={text => setUsername(text)}
+        />
+        <GpTextInput
+          style={styles.textInput}
+          label={'Enter Password'}
+          // value={state.password}
+          returnKeyType="done"
+          // error={error.passwordError}
+          right={
+            // state.secureText ? (
+            <TextInput.Icon
+              icon={secureText ? 'eye' : 'eye-off'}
+              onPress={() => setSecureText(!secureText)}
+            />
+          }
+          secureTextEntry={secureText}
+          onChangeText={text => {
+            setPassword(text);
+          }}
+        />
+        <GpButton type={btnTypes.text} onPress={handleNavigate}>
+          <GpText style={styles.colorSuccess}>Forgot Password</GpText>
+        </GpButton>
+        <GpButton
+          style={[styles.buttonDark, styles.mt15]}
+          onPress={() => handleLogin}>
+          <GpText
+            style={[
+              styles.textBlack,
+              styles.buttonDarkText,
+              styles.textLG,
+              styles.semiBold,
+            ]}>
+            LOGIN
+          </GpText>
+        </GpButton>
+        <View
+          style={[
+            styles.mt15,
+            styles.flex,
+            styles.justifyContentCenter,
+            styles.gap4,
+          ]}>
+          <Pressable onPress={() => console.log('Clicked Google Icon')}>
+            <GpImage
+              style={styles.loginIcon}
+              source={{uri: IMAGES.GOOGLE}}
+              accessibilityLabel="AppleStore"
+            />
+          </Pressable>
+          <Pressable onPress={() => console.log('Clicked Facebook Icon')}>
+            <GpImage
+              style={styles.loginIcon}
+              source={{uri: IMAGES.FACEBOOK}}
+              accessibilityLabel="AppleStore"
+            />
+          </Pressable>
+        </View>
+        <GpButton type={btnTypes.text} onPress={handleNavigate}>
+          <GpText style={styles.colorGrey}>New User? SIGNUP</GpText>
+        </GpButton>
+      </View>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 16,
-  },
-  input: {
-    height: 40,
-    width: '100%',
-    borderColor: 'gray',
-    borderWidth: 1,
-    marginBottom: 16,
-    paddingHorizontal: 8,
-  },
-});
 
 export default LoginScreen;

@@ -2,7 +2,7 @@
 import React from 'react';
 import {StyleSheet} from 'react-native';
 import {Button} from 'react-native-paper';
-import { COLORS } from '../common/colors';
+import {COLORS} from '../common/colors';
 
 export default function GpButton(props) {
   const {children, type} = props;
@@ -29,8 +29,8 @@ const btnStyle = StyleSheet.create({
   buttonStyle: {
     textAlign: 'center',
     justifyContent: 'center',
-    height: 46,
-    borderRadius: 24,
+    // height: 46,
+    // borderRadius: 24,
     // margin: normalize(8),
   },
 });

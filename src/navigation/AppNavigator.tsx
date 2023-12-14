@@ -27,7 +27,7 @@ function AppNavigator(): JSX.Element {
   // };
   return (
     <NavigationContainer>
-      <AppStack.Navigator initialRouteName={STACK.WALKTHROUGH1}>
+      <AppStack.Navigator initialRouteName={STACK.LOGIN}>
         <AppStack.Screen
           name={STACK.WALKTHROUGH1}
           options={{headerShown: false}}
