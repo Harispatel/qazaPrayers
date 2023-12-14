@@ -5,13 +5,9 @@ import {CommonActions} from '@react-navigation/native';
 
 // Components
 import {STACK} from '../../components/common/stackNames';
-import {COLORS} from '../../components/common/colors';
 import styles from '../../components/common/styles';
 import GpButton from '../../components/elements/GpButton';
-import GpImage from '../../components/elements/GpImage';
-import {txtHead} from '../../components/common/constants';
 import {IMAGES} from '../../assets';
-import GpText from '../../components/elements/GpText';
 import WkContainer from '../../components/wlkthContent';
 
 interface WalkthroughScreenProps {
@@ -50,27 +46,10 @@ const Walkthrough2: React.FC<WalkthroughScreenProps> = ({navigation}) => {
       <WkContainer
         image={IMAGES.COMMUNITY}
         text={'Some Content Walkthrough 2'}
+        handleNext={handleNext}
+        handleSkip={handleSkip}
+        handlePrevious={handlePrevious}
       />
-      <View style={styles.walkthroughContainer}>
-        <View style={styles.rowDirection}>
-          <GpButton
-            onPress={handleSkip}
-            style={{
-              ...styles.skipBtn,
-            }}>
-            <Text style={styles.skTxt}>Skip</Text>
-          </GpButton>
-          <GpButton
-            onPress={handleNext}
-            style={{
-              ...styles.nextBtn,
-              color: COLORS.WHITE,
-              backgroundColor: COLORS.SUCCESS,
-            }}>
-            <Text style={styles.wkTxt}>Next</Text>
-          </GpButton>
-        </View>
-      </View>
     </View>
   );
 };

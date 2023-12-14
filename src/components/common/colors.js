@@ -22,6 +22,8 @@ export const COLORS = {
 
   LIGHT_GREY: '#E0E0E0',
 
+  DARK_GREY: '#606060',
+
   DIVIDER: '#888888',
 
   BG_OFF_WHITE: '#f8f8f8',
@@ -69,7 +71,6 @@ export const COLORS = {
   BAGE_LIGTH_BLUE: '#73d0e1',
 
   TRANSPARENT: '#00000000',
-
 
   SKY_BLUE: '#31E4F4',
 
