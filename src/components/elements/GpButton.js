@@ -13,6 +13,7 @@ export default function GpButton(props) {
       uppercase={false}
       style={[
         btnStyle.buttonStyle,
+        // eslint-disable-next-line react-native/no-inline-styles
         {
           borderWidth: props?.type == 'outlined' ? 1 : 0,
           borderColor: props?.type == 'outlined' ? COLORS.PRIMARY_TXT : null,

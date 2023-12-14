@@ -33,7 +33,7 @@ const Walkthrough1: React.FC<WalkthroughScreenProps> = ({navigation}) => {
       <ImageBackground
         source={IMAGES.BGIMG}
         resizeMode="cover"
-        style={styles.logo}></ImageBackground>
+        style={styles.logo} />
       <WkContainer
         image={IMAGES.COMMUNITY}
         text={'Some Content Walkthrough 1'}
@@ -42,7 +42,7 @@ const Walkthrough1: React.FC<WalkthroughScreenProps> = ({navigation}) => {
         <View style={styles.rowDirection}>
           <GpButton
             onPress={handleSkip}
-            type={"text"}
+            type={'text'}
             style={{
               ...styles.skipBtn,
             }}>
@@ -50,10 +50,10 @@ const Walkthrough1: React.FC<WalkthroughScreenProps> = ({navigation}) => {
           </GpButton>
           <GpButton
           onPress={() => handleNext()}
-          type={"contained"}
+          type={'contained'}
           style={{...styles.nextBtn,backgroundColor:COLORS.SUCCESS}}
         >
-          <GpText type={"buttonText"} style={{ color: COLORS.WHITE }}>
+          <GpText type={'buttonText'} style={{ color: COLORS.WHITE }}>
             Next
           </GpText>
         </GpButton>
