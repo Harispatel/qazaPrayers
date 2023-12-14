@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import {StyleSheet} from 'react-native';
 
 import {COLORS} from './colors';
@@ -75,9 +74,8 @@ export default StyleSheet.create({
     width: '100%',
     height: 60,
     backgroundColor: '#CDCDCD',
-    borderRadius: 8,
     paddingHorizontal: 10,
-    fontSize: 18,
+    fontSize: 15,
   },
   buttonDark: {
     backgroundColor: '#4D4D4D',
@@ -106,8 +104,8 @@ export default StyleSheet.create({
     marginVertical: 15,
   },
   signUpIcon: {
-    width: 60,
-    height: 60,
+    width: '10%',
+    height: '10%',
   },
   loginIcon: {
     width: 60,

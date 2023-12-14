@@ -1,12 +1,12 @@
-/* eslint-disable prettier/prettier */
 import {Text, View, TouchableOpacity, Image} from 'react-native';
 import React, {useState} from 'react';
 import styles from '../components/common/styles';
 import {GpButton, GpText, GpTextInput} from '../components/elements';
 import {btnTypes, txtHead} from '../components/common/constants';
 
-const SignupScreen: React.FC = ({navigation}) => {
+const SignupScreen: React.FC = () => {
   const [firstname, setFirstname] = useState('');
+  console.log(firstname);
   return (
     <View style={[styles.contentContainer]}>
       <GpText
@@ -24,17 +24,17 @@ const SignupScreen: React.FC = ({navigation}) => {
           keyboardType="number-pad"
           style={[styles.textInput, styles.mt15]}
           label={'Enter your Phone Number'}
-          onChangeText={text => setFirstname(text)}
+          onChangeText={(text: any) => setFirstname(text)}
         />
         <GpTextInput
           style={[styles.textInput, styles.mt15]}
           label={'First name'}
-          onChangeText={text => setFirstname(text)}
+          onChangeText={(text: any) => setFirstname(text)}
         />
         <GpTextInput
           style={[styles.textInput, styles.mt15]}
           label={'Enter your Email'}
-          onChangeText={text => setFirstname(text)}
+          onChangeText={(text: any) => setFirstname(text)}
         />
         <TouchableOpacity
           style={[styles.buttonDark, styles.mt15]}
@@ -58,7 +58,8 @@ const SignupScreen: React.FC = ({navigation}) => {
           ]}>
           <TouchableOpacity>
             <Image
-              style={styles.signUpIcon}
+              height={60}
+              width={60}
               source={{uri: 'https://i.postimg.cc/hzrKgYsG/google.png'}}
               accessibilityLabel="google"
             />
@@ -66,7 +67,8 @@ const SignupScreen: React.FC = ({navigation}) => {
 
           <TouchableOpacity>
             <Image
-              style={styles.signUpIcon}
+              height={60}
+              width={60}
               source={{uri: 'https://i.postimg.cc/p5LRdBcJ/app-store.png'}}
               accessibilityLabel="AppleStore"
             />
