@@ -97,6 +97,9 @@ export default StyleSheet.create({
   textMD: {
     fontSize: 15,
   },
+  textSM: {
+    fontSize: 5,
+  },
   mt45: {
     marginVertical: 45,
   },

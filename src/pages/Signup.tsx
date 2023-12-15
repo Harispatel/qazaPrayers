@@ -4,9 +4,19 @@ import styles from '../components/common/styles';
 import {GpButton, GpText, GpTextInput} from '../components/elements';
 import {btnTypes, txtHead} from '../components/common/constants';
 
-const SignupScreen: React.FC = () => {
-  const [firstname, setFirstname] = useState('');
-  console.log(firstname);
+import {STACK} from '../components/common/stackNames';
+
+const SignupScreen: React.FC = ({navigation}: any) => {
+  const [fullname, setFullname] = useState('');
+  const handleOtpNav = () => {
+    navigation.navigate(STACK.OTP);
+  };
+
+  const handleLogin = () => {
+    navigation.navigate(STACK.LOGIN);
+  };
+
+  console.log(fullname);
   return (
     <View style={[styles.contentContainer]}>
       <GpText
@@ -23,23 +33,23 @@ const SignupScreen: React.FC = () => {
         <GpTextInput
           keyboardType="number-pad"
           style={[styles.textInput, styles.mt15]}
-          label={'Enter your Phone Number'}
-          onChangeText={(text: any) => setFirstname(text)}
+          label={'Mobile Number'}
+          onChangeText={(text: any) => setFullname(text)}
         />
         <GpTextInput
           style={[styles.textInput, styles.mt15]}
-          label={'First name'}
-          onChangeText={(text: any) => setFirstname(text)}
+          label={'Full Name'}
+          onChangeText={(text: any) => setFullname(text)}
         />
         <GpTextInput
           style={[styles.textInput, styles.mt15]}
-          label={'Enter your Email'}
-          onChangeText={(text: any) => setFirstname(text)}
+          label={'Email'}
+          onChangeText={(text: any) => setFullname(text)}
         />
-        <TouchableOpacity
+        <GpButton
           style={[styles.buttonDark, styles.mt15]}
-          onPress={() => {}}>
-          <Text
+          onPress={handleOtpNav}>
+          <GpText
             style={[
               styles.textBlack,
               styles.buttonDarkText,
@@ -47,8 +57,8 @@ const SignupScreen: React.FC = () => {
               styles.semiBold,
             ]}>
             SIGN UP
-          </Text>
-        </TouchableOpacity>
+          </GpText>
+        </GpButton>
         <View
           style={[
             styles.mt15,
@@ -81,8 +91,10 @@ const SignupScreen: React.FC = () => {
             styles.justifyContentCenter,
             styles.gap1,
           ]}>
-          <Text style={[styles.textBlack]}>Already have an account?</Text>
-          <GpButton type={btnTypes.text} onPress={{}}>
+          <Text style={[styles.textBlack, styles.mt15]}>
+            Already have an account?
+          </Text>
+          <GpButton type={btnTypes.text} onPress={handleLogin}>
             <GpText style={[styles.textBlack, styles.semiBold, styles.textMD]}>
               LOGIN
             </GpText>

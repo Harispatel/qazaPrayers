@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import React, {useState} from 'react';
 import {View, Pressable} from 'react-native';
 import {TextInput} from 'react-native-paper';
@@ -11,7 +10,7 @@ import styles from '../components/common/styles';
 import GpImage from '../components/elements/GpImage';
 import {IMAGES} from '../assets';
 
-const LoginScreen: React.FC = ({navigation}) => {
+const LoginScreen: React.FC = ({navigation}: any) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [secureText, setSecureText] = useState(true);
@@ -47,7 +46,7 @@ const LoginScreen: React.FC = ({navigation}) => {
           // keyboardType="number-pad"
           style={[styles.textInput, styles.mt15]}
           label={'Enter Email id'}
-          onChangeText={text => setUsername(text)}
+          onChangeText={(text: any) => setUsername(text)}
         />
         <GpTextInput
           style={styles.textInput}
@@ -63,7 +62,7 @@ const LoginScreen: React.FC = ({navigation}) => {
             />
           }
           secureTextEntry={secureText}
-          onChangeText={text => {
+          onChangeText={(text: any) => {
             setPassword(text);
           }}
         />
