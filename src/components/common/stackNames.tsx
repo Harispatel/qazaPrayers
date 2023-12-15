@@ -5,4 +5,5 @@ export const STACK = {
   LOGIN: 'Login',
   SIGN_UP: 'SignUp',
   HOME: 'Home',
+  OTP: 'Otp',
 };
