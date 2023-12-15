@@ -118,8 +118,14 @@ export default StyleSheet.create({
   flex: {
     flexDirection: 'row',
   },
+  ml5: {
+    marginLeft: 5,
+  },
   justifyContentEvenly: {
     justifyContent: 'space-evenly',
+  },
+  justifyContentBetween: {
+    justifyContent: 'space-between',
   },
   justifyContentCenter: {
     justifyContent: 'center',
