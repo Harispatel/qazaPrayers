@@ -1,10 +1,11 @@
-import {Text, View, TouchableOpacity, Image} from 'react-native';
+import {Text, View, Pressable} from 'react-native';
 import React, {useState} from 'react';
 import styles from '../components/common/styles';
-import {GpButton, GpText, GpTextInput} from '../components/elements';
+import {GpButton, GpImage, GpText, GpTextInput} from '../components/elements';
 import {btnTypes, txtHead} from '../components/common/constants';
 
 import {STACK} from '../components/common/stackNames';
+import {IMAGES} from '../assets';
 
 const SignupScreen: React.FC = ({navigation}: any) => {
   const [fullname, setFullname] = useState('');
@@ -66,23 +67,20 @@ const SignupScreen: React.FC = ({navigation}: any) => {
             styles.justifyContentCenter,
             styles.gap4,
           ]}>
-          <TouchableOpacity>
-            <Image
-              height={60}
-              width={60}
-              source={{uri: 'https://i.postimg.cc/hzrKgYsG/google.png'}}
-              accessibilityLabel="google"
-            />
-          </TouchableOpacity>
-
-          <TouchableOpacity>
-            <Image
-              height={60}
-              width={60}
-              source={{uri: 'https://i.postimg.cc/p5LRdBcJ/app-store.png'}}
+          <Pressable onPress={() => console.log('Clicked Google Icon')}>
+            <GpImage
+              style={styles.loginIcon}
+              source={{uri: IMAGES.GOOGLE}}
               accessibilityLabel="AppleStore"
             />
-          </TouchableOpacity>
+          </Pressable>
+          <Pressable onPress={() => console.log('Clicked Facebook Icon')}>
+            <GpImage
+              style={styles.loginIcon}
+              source={{uri: IMAGES.FACEBOOK}}
+              accessibilityLabel="AppleStore"
+            />
+          </Pressable>
         </View>
         <View
           style={[
