@@ -1,3 +1,7 @@
+// Req
+==== ?light mode or dark mode
+
+
 top menu 
     search bar
     in app notification
@@ -5,6 +9,7 @@ top menu
 
 otp 
 whatApp otp 
+customer optinput handelery
 
 home 
 // ==== ? what days you prefer to work on
@@ -47,7 +52,7 @@ show all the message with whom
 inner page  
     chats
 
-profile
+user profile
     image upload
 
     edit
@@ -59,7 +64,7 @@ support
     become a vendor
 
 preferences
-    city selection
+    city (location) selection
 
 terms and condition
 app version 

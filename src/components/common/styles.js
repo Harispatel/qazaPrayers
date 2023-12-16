@@ -5,6 +5,9 @@ import {Typography} from './typography';
 import {Constants, width} from './constants';
 
 export default StyleSheet.create({
+  primaryColor: {
+    color: '#6CCA55',
+  },
   titleContainer: {
     backgroundColor: COLORS.GREEN,
     padding: Constants.GAP,
@@ -105,6 +108,12 @@ export default StyleSheet.create({
   },
   mt15: {
     marginVertical: 15,
+  },
+  mb15: {
+    marginHorizontal: 15,
+  },
+  mt30: {
+    marginVertical: 30,
   },
   signUpIcon: {
     width: '10%',
