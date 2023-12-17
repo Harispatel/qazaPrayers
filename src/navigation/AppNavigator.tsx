@@ -9,6 +9,7 @@ import WalkthroughScreen3 from '../pages/Walkthrough/Walkthrough3';
 import {LogBox} from 'react-native';
 import SignUp from '../pages/Signup';
 import Otp from '../pages/Otp';
+import Home from '../pages/home/Home';
 
 function AppNavigator(): JSX.Element {
   const AppStack = createNativeStackNavigator();
@@ -46,8 +47,9 @@ function AppNavigator(): JSX.Element {
         <AppStack.Screen
           name={STACK.LOGIN}
           options={{headerShown: true}}
-          component={LoginScreen}
+          component={Home}
         />
+        {/* LoginScreen */}
         <AppStack.Screen
           name={STACK.SIGN_UP}
           options={{headerShown: true}}
@@ -57,6 +59,11 @@ function AppNavigator(): JSX.Element {
           name={STACK.OTP}
           options={{headerShown: true}}
           component={Otp}
+        />
+        <AppStack.Screen
+          name={STACK.HOME}
+          options={{headerShown: true}}
+          component={Home}
         />
       </AppStack.Navigator>
     </NavigationContainer>

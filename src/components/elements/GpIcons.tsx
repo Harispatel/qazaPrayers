@@ -16,9 +16,7 @@ import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import Zocial from 'react-native-vector-icons/Zocial';
 import GpImage from './GpImage';
 
-
-
-const getIcon = (type, props) => {
+const getIcon = (type: any, props: any) => {
   switch (type) {
     case 'AntDesign':
       return <AntDesign accessibility={true} {...props} />;
@@ -92,7 +90,7 @@ const getIcon = (type, props) => {
       return;
   }
 };
-const PtIcons = props => {
+const PtIcons = (props: any) => {
   return getIcon(props.type, props);
 };
 

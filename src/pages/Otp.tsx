@@ -1,27 +1,35 @@
 import {View} from 'react-native';
+import OTPTextInput from 'react-native-otp-textinput';
 import React, {useState, useRef} from 'react';
-import styles from '../components/common/styles';
+
+// !other import
 import {GpButton, GpText, GpTextInput} from '../components/elements';
 import {txtHead} from '../components/common/constants';
+import styles from '../components/common/styles';
+import {STACK} from '../components/common/stackNames';
 
-import OTPTextInput from 'react-native-otp-textinput';
-
-export default function Otp() {
+export default function Otp({navigation}: any) {
+  // ? otp input code ==== start
   let otpInput: any = useRef(null);
   const clearText = () => {
     otpInput.current.clear();
   };
-
   const setText = () => {
     otpInput.current.setValue('1234');
   };
+  // ? otp input code ==== end
+
+  // ? home page navigate ==== start
+  const handleHome = () => {
+    navigation.navigate(STACK.HOME);
+  };
+  // ? home page navigate ==== end
 
   console.log(clearText, setText);
   const [email, setEmailValue] = useState('');
-  const handleHome = () => {
-    return;
-  };
   console.log(email);
+
+  // ? main code ==== start
   return (
     <View style={[styles.contentContainer]}>
       <GpText

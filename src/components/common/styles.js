@@ -97,11 +97,17 @@ export default StyleSheet.create({
   textLG: {
     fontSize: 20,
   },
+  textXL: {
+    fontSize: 28,
+  },
   textMD: {
     fontSize: 15,
   },
   textSM: {
-    fontSize: 5,
+    fontSize: 10,
+  },
+  textSM10: {
+    fontSize: 12,
   },
   mt45: {
     marginVertical: 45,
@@ -111,6 +117,15 @@ export default StyleSheet.create({
   },
   mb15: {
     marginHorizontal: 15,
+  },
+  mb5: {
+    marginHorizontal: 5,
+  },
+  test18: {
+    fontSize: 18,
+  },
+  mb_5: {
+    marginTop: -20,
   },
   mt30: {
     marginVertical: 30,
@@ -129,6 +144,9 @@ export default StyleSheet.create({
   },
   ml5: {
     marginLeft: 5,
+  },
+  ml10: {
+    marginLeft: 10,
   },
   justifyContentEvenly: {
     justifyContent: 'space-evenly',
@@ -150,5 +168,100 @@ export default StyleSheet.create({
   },
   colorGrey: {
     color: COLORS.DARK_GREY,
+  },
+  homeCarCard: {
+    borderRadius: 15,
+  },
+  absolute: {
+    position: 'fixed',
+  },
+  shadowMd: {
+    elevation: 1,
+  },
+  bold: {
+    fontWeight: 'bold',
+  },
+  center: {
+    textAlign: 'center',
+  },
+  overlay: {
+    position: 'absolute',
+    top: 190,
+    bottom: 0,
+    left: 20,
+    right: 0,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  vendorIcon: {
+    borderRadius: 50,
+    resizeMode: 'cover',
+    marginVertical: 2,
+    width: 50,
+    height: 50,
+  },
+  vendorCard: {
+    padding: 10,
+    width: 350,
+    height: 200,
+  },
+  underline: {
+    textDecorationLine: 'underline',
+  },
+  font18: {
+    fontSize: 16,
+  },
+  gap3: {
+    gap: 20,
+  },
+  mt5: {
+    marginTop: 8,
+  },
+  p2: {
+    marginHorizontal: 10,
+    marginVertical: 10,
+  },
+  roundedLG: {
+    borderRadius: 15,
+  },
+  borderBottom: {
+    borderBottomWidth: 0.5,
+    paddingBottom: 10,
+    borderColor: 'black',
+  },
+  verfiy: {
+    paddingTop: 6,
+    paddingBottom: 6,
+    paddingLeft: 12,
+    paddingRight: 12,
+    borderRadius: 15,
+    backgroundColor: '#6CCA55',
+  },
+  vendorBottomIcon: {
+    borderRadius: 50,
+    resizeMode: 'cover',
+    marginVertical: 2,
+    width: 20,
+    height: 20,
+  },
+  gary300: {
+    backgroundColor: '#e5e7eb',
+  },
+  mb10: {
+    marginVertical: 10,
+  },
+  p10: {
+    paddingVertical: 10,
+  },
+  overlayText: {
+    fontSize: 15,
+    fontWeight: '700',
+  },
+  becomeVendor: {
+    width: 350,
+    height: 350,
+  },
+  textRight: {
+    textAlign: 'right',
   },
 });

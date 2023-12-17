@@ -1,10 +1,9 @@
-/* eslint-disable prettier/prettier */
 import React from 'react';
 import {StyleSheet} from 'react-native';
 import {Button} from 'react-native-paper';
 import {COLORS} from '../common/colors';
 
-export default function GpButton(props) {
+export default function GpButton(props: any) {
   const {children, type} = props;
   return (
     <Button
