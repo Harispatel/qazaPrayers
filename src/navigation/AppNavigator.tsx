@@ -47,9 +47,8 @@ function AppNavigator(): JSX.Element {
         <AppStack.Screen
           name={STACK.LOGIN}
           options={{headerShown: true}}
-          component={Home}
+          component={LoginScreen}
         />
-        {/* LoginScreen */}
         <AppStack.Screen
           name={STACK.SIGN_UP}
           options={{headerShown: true}}
