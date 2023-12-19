@@ -5,10 +5,9 @@ import {TextInput} from 'react-native-paper';
 
 // Components
 import {STACK} from '../components/common/stackNames';
-import {GpButton, GpText, GpTextInput} from '../components/elements';
+import {GpButton, GpText, GpTextInput, GpImage} from '../components/elements';
 import {btnTypes, emailRegex, txtHead} from '../components/common/constants';
 import styles from '../components/common/styles';
-import GpImage from '../components/elements/GpImage';
 import {IMAGES} from '../assets';
 
 const LoginScreen: React.FC = ({navigation}) => {
@@ -23,13 +22,14 @@ const LoginScreen: React.FC = ({navigation}) => {
 
   const handleLogin = () => {
     // Authentication logic
-    console.log('LOGIN CALLED');
-    if (!username || emailRegex.test(username) === false) {
-      setError({...error, emailError: true});
-      console.log('PLESE ENTER USER NAME');
-      return;
-    }
-    console.warn('Logging in with:', {username, password});
+    // Validation Temporary Commented
+    // if (!username || emailRegex.test(username) === false) {
+    //   setError({...error, emailError: true});
+    //   console.log('PLESE ENTER USER NAME');
+    //   return;
+    // }
+    console.log('Logging in with:', {username, password});
+    navigation.navigate(STACK.HOME);
   };
   const handleNavigate = () => {
     navigation.navigate(STACK.SIGN_UP);
@@ -39,7 +39,7 @@ const LoginScreen: React.FC = ({navigation}) => {
     <View style={styles.contentContainer}>
       <GpText
         type={txtHead.heading3}
-        style={[styles.semiBold, styles.textBlack, styles.textLG]}>
+        style={{...styles.semiBold, ...styles.textBlack, ...styles.textLG}}>
         Welcome {'\n'}back!
       </GpText>
       <View style={[styles.mt45]}>
@@ -58,7 +58,7 @@ const LoginScreen: React.FC = ({navigation}) => {
           right={
             // state.secureText ? (
             <TextInput.Icon
-              icon={secureText ? 'eye' : 'eye-off'}
+              icon={{uri: secureText ? IMAGES.EYE_OFF : IMAGES.EYE_ON}}
               onPress={() => setSecureText(!secureText)}
             />
           }
@@ -71,16 +71,18 @@ const LoginScreen: React.FC = ({navigation}) => {
           <GpText style={styles.colorSuccess}>Forgot Password</GpText>
         </GpButton>
         <GpButton
+          type={btnTypes.text}
           style={[styles.buttonDark, styles.mt15]}
-          onPress={() => handleLogin}>
+          onPress={handleLogin}>
           <GpText
-            style={[
-              styles.textBlack,
-              styles.buttonDarkText,
-              styles.textLG,
-              styles.semiBold,
-            ]}>
-            LOGIN
+            style={{
+              ...styles.textBlack,
+              ...styles.buttonDarkText,
+              ...styles.textLG,
+              ...styles.semiBold,
+              ...styles.textUP,
+            }}>
+            Login
           </GpText>
         </GpButton>
         <View
@@ -93,7 +95,7 @@ const LoginScreen: React.FC = ({navigation}) => {
           <Pressable onPress={() => console.log('Clicked Google Icon')}>
             <GpImage
               style={styles.loginIcon}
-              source={{uri: IMAGES.GOOGLE}}
+              source={IMAGES.GOOGLE}
               accessibilityLabel="AppleStore"
             />
           </Pressable>

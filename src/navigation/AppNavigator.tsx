@@ -1,48 +1,38 @@
 /* eslint-disable prettier/prettier */
 import React, {useEffect} from 'react';
 import LoginScreen from '../pages/Login';
+import {LogBox} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
 import {STACK} from '../components/common/stackNames';
-import WalkthroughScreen1 from '../pages/Walkthrough/Walkthrough1';
-import WalkthroughScreen2 from '../pages/Walkthrough/Walkthrough2';
-import WalkthroughScreen3 from '../pages/Walkthrough/Walkthrough3';
-import {LogBox} from 'react-native';
+import {Walkthrough1, Walkthrough2, Walkthrough3} from '../pages/Walkthrough';
+
 import SignUp from '../pages/Signup';
+import {OnBoarding1} from '../pages/OnBoarding';
 
 function AppNavigator(): JSX.Element {
   const AppStack = createNativeStackNavigator();
-  useEffect(() => {
-    LogBox.ignoreLogs([
-      'In React 18, SSRProvider is not necessary and is a noop. You can remove it from your app.',
-    ]);
-  }, []);
-  // const linking = {
-  //   prefixes: [
-  //     /* your linking prefixes */
-  //   ],
-  //   config: {
-  //     /* configuration for matching screens with paths */
-  //   },
-  // };
   return (
     <NavigationContainer>
       <AppStack.Navigator initialRouteName={STACK.LOGIN}>
+        {/* Walkthrough Stacks */}
         <AppStack.Screen
           name={STACK.WALKTHROUGH1}
           options={{headerShown: false}}
-          component={WalkthroughScreen1}
+          component={Walkthrough1}
         />
         <AppStack.Screen
           name={STACK.WALKTHROUGH2}
           options={{headerShown: false}}
-          component={WalkthroughScreen2}
+          component={Walkthrough2}
         />
         <AppStack.Screen
           name={STACK.WALKTHROUGH3}
           options={{headerShown: false}}
-          component={WalkthroughScreen3}
+          component={Walkthrough3}
         />
+        {/* Auth Stacks */}
         <AppStack.Screen
           name={STACK.LOGIN}
           options={{headerShown: true}}
@@ -52,6 +42,12 @@ function AppNavigator(): JSX.Element {
           name={STACK.SIGN_UP}
           options={{headerShown: true}}
           component={SignUp}
+        />
+        {/* Boarding Stacks */}
+        <AppStack.Screen
+          name={STACK.ONBOARDING1}
+          options={{headerShown: true}}
+          component={OnBoarding1}
         />
       </AppStack.Navigator>
     </NavigationContainer>

@@ -93,6 +93,9 @@ export default StyleSheet.create({
   semiBold: {
     fontWeight: '800',
   },
+  textUP: {
+    textTransform: 'uppercase',
+  },
   textLG: {
     fontSize: 20,
   },

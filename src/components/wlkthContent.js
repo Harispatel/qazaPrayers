@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import {View} from 'react-native';
-import {GpButton, GpText} from '../components/elements';
+import {GpButton, GpImage, GpText} from '../components/elements';
 import styles from './common/styles';
 import {btnTypes, txtHead} from './common/constants';
 import {COLORS} from './common/colors';
