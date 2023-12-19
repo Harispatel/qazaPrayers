@@ -30,13 +30,12 @@ const Walkthrough1: React.FC<WalkthroughScreenProps> = ({navigation}) => {
       <ImageBackground
         source={IMAGES.BGIMG}
         resizeMode="cover"
-        style={styles.logo}></ImageBackground>
+        style={styles.logo} />
       <WkContainer
         image={IMAGES.COMMUNITY}
         text={'Some Content Walkthrough 1'}
         handleNext={handleNext}
         handleSkip={handleSkip}
-        // handlePrevious={handlePrevious}
       />
     </View>
   );

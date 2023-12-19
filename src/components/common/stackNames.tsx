@@ -8,4 +8,5 @@ export const STACK = {
   ONBOARDING1: 'OnBoarding1',
   ONBOARDING2: 'OnBoarding2',
   ONBOARDING3: 'OnBoarding3',
+  OTP: 'Otp',
 };

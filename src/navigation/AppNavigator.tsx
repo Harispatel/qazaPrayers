@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import React, {useEffect} from 'react';
 import LoginScreen from '../pages/Login';
 import {LogBox} from 'react-native';
@@ -10,6 +9,7 @@ import {Walkthrough1, Walkthrough2, Walkthrough3} from '../pages/Walkthrough';
 
 import SignUp from '../pages/Signup';
 import {OnBoarding1} from '../pages/OnBoarding';
+import Otp from '../pages/Otp';
 
 function AppNavigator(): JSX.Element {
   const AppStack = createNativeStackNavigator();
@@ -48,6 +48,11 @@ function AppNavigator(): JSX.Element {
           name={STACK.ONBOARDING1}
           options={{headerShown: true}}
           component={OnBoarding1}
+        />
+        <AppStack.Screen
+          name={STACK.OTP}
+          options={{headerShown: true}}
+          component={Otp}
         />
       </AppStack.Navigator>
     </NavigationContainer>

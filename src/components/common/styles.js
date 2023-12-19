@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import {StyleSheet} from 'react-native';
 
 import {COLORS} from './colors';
@@ -6,6 +5,9 @@ import {Typography} from './typography';
 import {Constants, width} from './constants';
 
 export default StyleSheet.create({
+  primaryColor: {
+    color: '#6CCA55',
+  },
   titleContainer: {
     backgroundColor: COLORS.GREEN,
     padding: Constants.GAP,
@@ -75,9 +77,8 @@ export default StyleSheet.create({
     width: '100%',
     height: 60,
     backgroundColor: '#CDCDCD',
-    borderRadius: 8,
     paddingHorizontal: 10,
-    fontSize: 18,
+    fontSize: 15,
   },
   buttonDark: {
     backgroundColor: '#4D4D4D',
@@ -102,15 +103,24 @@ export default StyleSheet.create({
   textMD: {
     fontSize: 15,
   },
+  textSM: {
+    fontSize: 5,
+  },
   mt45: {
     marginVertical: 45,
   },
   mt15: {
     marginVertical: 15,
   },
+  mb15: {
+    marginHorizontal: 15,
+  },
+  mt30: {
+    marginVertical: 30,
+  },
   signUpIcon: {
-    width: 60,
-    height: 60,
+    width: '10%',
+    height: '10%',
   },
   loginIcon: {
     width: 60,
@@ -120,8 +130,14 @@ export default StyleSheet.create({
   flex: {
     flexDirection: 'row',
   },
+  ml5: {
+    marginLeft: 5,
+  },
   justifyContentEvenly: {
     justifyContent: 'space-evenly',
+  },
+  justifyContentBetween: {
+    justifyContent: 'space-between',
   },
   justifyContentCenter: {
     justifyContent: 'center',

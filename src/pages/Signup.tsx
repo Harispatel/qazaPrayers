@@ -1,12 +1,23 @@
-/* eslint-disable prettier/prettier */
-import {Text, View, TouchableOpacity, Image} from 'react-native';
+import {Text, View, Pressable} from 'react-native';
 import React, {useState} from 'react';
 import styles from '../components/common/styles';
-import {GpButton, GpText, GpTextInput} from '../components/elements';
+import {GpButton, GpImage, GpText, GpTextInput} from '../components/elements';
 import {btnTypes, txtHead} from '../components/common/constants';
 
-const SignupScreen: React.FC = ({navigation}) => {
-  const [firstname, setFirstname] = useState('');
+import {STACK} from '../components/common/stackNames';
+import {IMAGES} from '../assets';
+
+const SignupScreen: React.FC = ({navigation}: any) => {
+  const [fullname, setFullname] = useState('');
+  const handleOtpNav = () => {
+    navigation.navigate(STACK.OTP);
+  };
+
+  const handleLogin = () => {
+    navigation.navigate(STACK.LOGIN);
+  };
+
+  console.log(fullname);
   return (
     <View style={[styles.contentContainer]}>
       <GpText
@@ -23,23 +34,23 @@ const SignupScreen: React.FC = ({navigation}) => {
         <GpTextInput
           keyboardType="number-pad"
           style={[styles.textInput, styles.mt15]}
-          label={'Enter your Phone Number'}
-          onChangeText={text => setFirstname(text)}
+          label={'Mobile Number'}
+          onChangeText={(text: any) => setFullname(text)}
         />
         <GpTextInput
           style={[styles.textInput, styles.mt15]}
-          label={'First name'}
-          onChangeText={text => setFirstname(text)}
+          label={'Full Name'}
+          onChangeText={(text: any) => setFullname(text)}
         />
         <GpTextInput
           style={[styles.textInput, styles.mt15]}
-          label={'Enter your Email'}
-          onChangeText={text => setFirstname(text)}
+          label={'Email'}
+          onChangeText={(text: any) => setFullname(text)}
         />
-        <TouchableOpacity
+        <GpButton
           style={[styles.buttonDark, styles.mt15]}
-          onPress={() => {}}>
-          <Text
+          onPress={handleOtpNav}>
+          <GpText
             style={[
               styles.textBlack,
               styles.buttonDarkText,
@@ -47,8 +58,8 @@ const SignupScreen: React.FC = ({navigation}) => {
               styles.semiBold,
             ]}>
             SIGN UP
-          </Text>
-        </TouchableOpacity>
+          </GpText>
+        </GpButton>
         <View
           style={[
             styles.mt15,
@@ -56,21 +67,20 @@ const SignupScreen: React.FC = ({navigation}) => {
             styles.justifyContentCenter,
             styles.gap4,
           ]}>
-          <TouchableOpacity>
-            <Image
-              style={styles.signUpIcon}
-              source={{uri: 'https://i.postimg.cc/hzrKgYsG/google.png'}}
-              accessibilityLabel="google"
-            />
-          </TouchableOpacity>
-
-          <TouchableOpacity>
-            <Image
-              style={styles.signUpIcon}
-              source={{uri: 'https://i.postimg.cc/p5LRdBcJ/app-store.png'}}
+          <Pressable onPress={() => console.log('Clicked Google Icon')}>
+            <GpImage
+              style={styles.loginIcon}
+              source={IMAGES.GOOGLE}
               accessibilityLabel="AppleStore"
             />
-          </TouchableOpacity>
+          </Pressable>
+          <Pressable onPress={() => console.log('Clicked Facebook Icon')}>
+            <GpImage
+              style={styles.loginIcon}
+              source={{uri: IMAGES.FACEBOOK}}
+              accessibilityLabel="AppleStore"
+            />
+          </Pressable>
         </View>
         <View
           style={[
@@ -79,8 +89,10 @@ const SignupScreen: React.FC = ({navigation}) => {
             styles.justifyContentCenter,
             styles.gap1,
           ]}>
-          <Text style={[styles.textBlack]}>Already have an account?</Text>
-          <GpButton type={btnTypes.text} onPress={{}}>
+          <Text style={[styles.textBlack, styles.mt15]}>
+            Already have an account?
+          </Text>
+          <GpButton type={btnTypes.text} onPress={handleLogin}>
             <GpText style={[styles.textBlack, styles.semiBold, styles.textMD]}>
               LOGIN
             </GpText>
