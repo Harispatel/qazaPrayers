@@ -70,7 +70,7 @@ const SignupScreen: React.FC = ({navigation}: any) => {
           <Pressable onPress={() => console.log('Clicked Google Icon')}>
             <GpImage
               style={styles.loginIcon}
-              source={{uri: IMAGES.GOOGLE}}
+              source={IMAGES.GOOGLE}
               accessibilityLabel="AppleStore"
             />
           </Pressable>
