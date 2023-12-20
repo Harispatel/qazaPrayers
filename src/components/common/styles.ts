@@ -118,6 +118,15 @@ export default StyleSheet.create({
   mt30: {
     marginVertical: 30,
   },
+  pl20: {
+    paddingLeft: 20,
+  },
+  pl10: {
+    paddingLeft: 10,
+  },
+  wt20: {
+    width: "25%",
+  },
   signUpIcon: {
     width: "10%",
     height: "10%",
