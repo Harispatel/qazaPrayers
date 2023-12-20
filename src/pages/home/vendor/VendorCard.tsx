@@ -2,6 +2,7 @@ import {View} from 'react-native';
 import React from 'react';
 import styles from '../../../components/common/styles';
 import {GpImage, GpText} from '../../../components/elements';
+import Feather from 'react-native-vector-icons/Feather';
 
 const VendorCard = () => {
   return (
@@ -29,7 +30,13 @@ const VendorCard = () => {
       </View>
       <View
         style={[styles.borderBottom, styles.flex, styles.gap3, styles.mt15]}>
-        <View style={[styles.verfiy]}>
+        <View style={[styles.verfiy, styles.flex]}>
+          <Feather
+            style={styles.textWhite}
+            name="check-circle"
+            size={15}
+            color="#EFEFEF"
+          />
           <GpText style={[styles.semiBold]}>Toyota Camry</GpText>
         </View>
         <View style={[styles.verfiy]}>

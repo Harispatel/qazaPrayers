@@ -16,7 +16,8 @@ import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import Zocial from 'react-native-vector-icons/Zocial';
 import GpImage from './GpImage';
 
-const getIcon = (type: any, props: any) => {
+// checkcircle;
+const  = (type: any, props: any) => {
   switch (type) {
     case 'AntDesign':
       return <AntDesign accessibility={true} {...props} />;

@@ -264,4 +264,7 @@ export default StyleSheet.create({
   textRight: {
     textAlign: 'right',
   },
+  textWhite: {
+    color: 'white',
+  },
 });

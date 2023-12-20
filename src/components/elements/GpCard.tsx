@@ -26,11 +26,10 @@ export default function GpCard({
       />
       <GpText
         style={[
-          styles.textBlack,
           styles.test18,
+          styles.overlayText,
           styles.overlay,
           styles.mb_5,
-          styles.overlayText,
         ]}>
         {iconText}
       </GpText>
