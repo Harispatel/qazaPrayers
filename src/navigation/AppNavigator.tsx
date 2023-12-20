@@ -1,61 +1,69 @@
-import React, {useEffect} from 'react';
-import LoginScreen from '../pages/Login';
-import {LogBox} from 'react-native';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import React from "react"
+import { NavigationContainer } from "@react-navigation/native"
+import { createNativeStackNavigator } from "@react-navigation/native-stack"
 
-import {STACK} from '../components/common/stackNames';
-import {Walkthrough1, Walkthrough2, Walkthrough3} from '../pages/Walkthrough';
+import { STACK } from "../components/common/stackNames"
+import { Walkthrough1, Walkthrough2, Walkthrough3 } from "../pages/Walkthrough"
 
-import SignUp from '../pages/Signup';
-import {OnBoarding1} from '../pages/OnBoarding';
-import Otp from '../pages/Otp';
+import {
+  LoginScreen,
+  Otp,
+  Profile,
+  SignupScreen,
+  OnBoarding1,
+} from "../pages/index"
 
 function AppNavigator(): JSX.Element {
-  const AppStack = createNativeStackNavigator();
+  const AppStack = createNativeStackNavigator()
   return (
     <NavigationContainer>
-      <AppStack.Navigator initialRouteName={STACK.LOGIN}>
+      <AppStack.Navigator initialRouteName={STACK.PROFILE}>
         {/* Walkthrough Stacks */}
         <AppStack.Screen
           name={STACK.WALKTHROUGH1}
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
           component={Walkthrough1}
         />
         <AppStack.Screen
           name={STACK.WALKTHROUGH2}
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
           component={Walkthrough2}
         />
         <AppStack.Screen
           name={STACK.WALKTHROUGH3}
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
           component={Walkthrough3}
         />
         {/* Auth Stacks */}
         <AppStack.Screen
           name={STACK.LOGIN}
-          options={{headerShown: true}}
+          options={{ headerShown: true }}
           component={LoginScreen}
         />
         <AppStack.Screen
           name={STACK.SIGN_UP}
-          options={{headerShown: true}}
-          component={SignUp}
+          options={{ headerShown: true }}
+          component={SignupScreen}
         />
         {/* Boarding Stacks */}
         <AppStack.Screen
           name={STACK.ONBOARDING1}
-          options={{headerShown: true}}
+          options={{ headerShown: true }}
           component={OnBoarding1}
         />
         <AppStack.Screen
           name={STACK.OTP}
-          options={{headerShown: true}}
+          options={{ headerShown: true }}
           component={Otp}
+        />
+        {/* Profile Stack */}
+        <AppStack.Screen
+          name={STACK.PROFILE}
+          options={{ headerShown: true }}
+          component={Profile}
         />
       </AppStack.Navigator>
     </NavigationContainer>
-  );
+  )
 }
-export default AppNavigator;
+export default AppNavigator

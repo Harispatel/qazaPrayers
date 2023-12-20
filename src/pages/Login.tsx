@@ -1,23 +1,23 @@
-import React, {useState} from 'react';
-import {View, Pressable} from 'react-native';
-import {TextInput} from 'react-native-paper';
+import React, { useState } from "react"
+import { View, Pressable } from "react-native"
+import { TextInput } from "react-native-paper"
 
 // Components
-import {STACK} from '../components/common/stackNames';
-import {GpButton, GpText, GpTextInput, GpImage} from '../components/elements';
-import {btnTypes, emailRegex, txtHead} from '../components/common/constants';
-import styles from '../components/common/styles';
-import {IMAGES} from '../assets';
+import { STACK } from "../components/common/stackNames"
+import { GpButton, GpText, GpTextInput, GpImage } from "../components/elements"
+import { btnTypes, emailRegex, txtHead } from "../components/common/constants"
+import styles from "../components/common/styles"
+import { IMAGES } from "../assets"
 
-const LoginScreen: React.FC = ({navigation}: any) => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [secureText, setSecureText] = useState(true);
+const LoginScreen: React.FC = ({ navigation }: any) => {
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
+  const [secureText, setSecureText] = useState(true)
 
   const [error, setError] = useState({
     emailError: false,
     passwordError: false,
-  });
+  })
 
   const handleLogin = () => {
     // Authentication logic
@@ -27,43 +27,44 @@ const LoginScreen: React.FC = ({navigation}: any) => {
     //   console.log('PLESE ENTER USER NAME');
     //   return;
     // }
-    console.log('Logging in with:', {username, password});
-    navigation.navigate(STACK.HOME);
-  };
+    console.log("Logging in with:", { username, password })
+    navigation.navigate(STACK.PROFILE)
+  }
   const handleNavigate = () => {
-    navigation.navigate(STACK.SIGN_UP);
-  };
+    navigation.navigate(STACK.SIGN_UP)
+  }
 
   return (
     <View style={styles.contentContainer}>
       <GpText
         type={txtHead.heading3}
-        style={{...styles.semiBold, ...styles.textBlack, ...styles.textLG}}>
-        Welcome {'\n'}back!
+        style={{ ...styles.semiBold, ...styles.textBlack, ...styles.textLG }}
+      >
+        Welcome {"\n"}back!
       </GpText>
       <View style={[styles.mt45]}>
         <GpTextInput
           // keyboardType="number-pad"
           style={[styles.textInput, styles.mt15]}
-          label={'Enter Email id'}
+          label={"Enter Email id"}
           onChangeText={(text: any) => setUsername(text)}
         />
         <GpTextInput
           style={styles.textInput}
-          label={'Enter Password'}
+          label={"Enter Password"}
           // value={state.password}
           returnKeyType="done"
           // error={error.passwordError}
           right={
             // state.secureText ? (
             <TextInput.Icon
-              icon={{uri: secureText ? IMAGES.EYE_OFF : IMAGES.EYE_ON}}
+              icon={{ uri: secureText ? IMAGES.EYE_OFF : IMAGES.EYE_ON }}
               onPress={() => setSecureText(!secureText)}
             />
           }
           secureTextEntry={secureText}
           onChangeText={(text: any) => {
-            setPassword(text);
+            setPassword(text)
           }}
         />
         <GpButton type={btnTypes.text} onPress={handleNavigate}>
@@ -72,7 +73,8 @@ const LoginScreen: React.FC = ({navigation}: any) => {
         <GpButton
           type={btnTypes.text}
           style={[styles.buttonDark, styles.mt15]}
-          onPress={handleLogin}>
+          onPress={handleLogin}
+        >
           <GpText
             style={{
               ...styles.textBlack,
@@ -80,7 +82,8 @@ const LoginScreen: React.FC = ({navigation}: any) => {
               ...styles.textLG,
               ...styles.semiBold,
               ...styles.textUP,
-            }}>
+            }}
+          >
             Login
           </GpText>
         </GpButton>
@@ -90,18 +93,19 @@ const LoginScreen: React.FC = ({navigation}: any) => {
             styles.flex,
             styles.justifyContentCenter,
             styles.gap4,
-          ]}>
-          <Pressable onPress={() => console.log('Clicked Google Icon')}>
+          ]}
+        >
+          <Pressable onPress={() => console.log("Clicked Google Icon")}>
             <GpImage
               style={styles.loginIcon}
               source={IMAGES.GOOGLE}
               accessibilityLabel="AppleStore"
             />
           </Pressable>
-          <Pressable onPress={() => console.log('Clicked Facebook Icon')}>
+          <Pressable onPress={() => console.log("Clicked Facebook Icon")}>
             <GpImage
               style={styles.loginIcon}
-              source={{uri: IMAGES.FACEBOOK}}
+              source={{ uri: IMAGES.FACEBOOK }}
               accessibilityLabel="AppleStore"
             />
           </Pressable>
@@ -111,7 +115,7 @@ const LoginScreen: React.FC = ({navigation}: any) => {
         </GpButton>
       </View>
     </View>
-  );
-};
+  )
+}
 
-export default LoginScreen;
+export default LoginScreen

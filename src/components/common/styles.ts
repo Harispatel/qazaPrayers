@@ -1,12 +1,12 @@
-import {StyleSheet} from 'react-native';
+import { StyleSheet } from "react-native"
 
-import {COLORS} from './colors';
-import {Typography} from './typography';
-import {Constants, width} from './constants';
+import { COLORS } from "./colors"
+import { Typography } from "./typography"
+import { Constants, width } from "./constants"
 
 export default StyleSheet.create({
   primaryColor: {
-    color: '#6CCA55',
+    color: "#6CCA55",
   },
   titleContainer: {
     backgroundColor: COLORS.GREEN,
@@ -38,11 +38,11 @@ export default StyleSheet.create({
   // Walkthrough Styling
   walkthroughContainer: {
     flex: 1,
-    flexDirection: 'row',
-    width: '100%',
+    flexDirection: "row",
+    width: "100%",
     paddingBottom: 20,
-    justifyContent: 'flex-end',
-    alignItems: 'flex-end',
+    justifyContent: "flex-end",
+    alignItems: "flex-end",
   },
   wkTxt: {
     color: COLORS.WHITE,
@@ -54,7 +54,7 @@ export default StyleSheet.create({
     color: COLORS.GREEN,
     marginTop: 10,
     fontSize: 20,
-    textAlign: 'center',
+    textAlign: "center",
   },
 
   logo: {
@@ -62,40 +62,40 @@ export default StyleSheet.create({
     height: 250,
   },
   description: {
-    textAlign: 'center',
+    textAlign: "center",
   },
   // Common Styling
   viewFlex: {
     flex: 1,
   },
   textBlack: {
-    color: 'black',
+    color: "black",
   },
   textInput: {
     borderWidth: 1,
-    borderColor: 'white',
-    width: '100%',
+    borderColor: "white",
+    width: "100%",
     height: 60,
-    backgroundColor: '#CDCDCD',
+    backgroundColor: "#CDCDCD",
     paddingHorizontal: 10,
     fontSize: 15,
   },
   buttonDark: {
-    backgroundColor: '#4D4D4D',
-    width: '100%',
+    backgroundColor: "#4D4D4D",
+    width: "100%",
     height: 60,
     borderRadius: 50,
   },
   buttonDarkText: {
-    textAlign: 'center',
+    textAlign: "center",
     marginVertical: 15,
-    color: 'white',
+    color: "white",
   },
   semiBold: {
-    fontWeight: '800',
+    fontWeight: "800",
   },
   textUP: {
-    textTransform: 'uppercase',
+    textTransform: "uppercase",
   },
   textLG: {
     fontSize: 20,
@@ -119,28 +119,39 @@ export default StyleSheet.create({
     marginVertical: 30,
   },
   signUpIcon: {
-    width: '10%',
-    height: '10%',
+    width: "10%",
+    height: "10%",
   },
   loginIcon: {
     width: 60,
     height: 60,
     borderRadius: 10,
   },
+  profileIcon: {
+    width: 60,
+    height: 60,
+    borderRadius: 50,
+  },
   flex: {
-    flexDirection: 'row',
+    flexDirection: "row",
   },
   ml5: {
     marginLeft: 5,
   },
+  ml15: {
+    marginLeft: 15,
+  },
+  mb10: {
+    marginLeft: 10,
+  },
   justifyContentEvenly: {
-    justifyContent: 'space-evenly',
+    justifyContent: "space-evenly",
   },
   justifyContentBetween: {
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
   },
   justifyContentCenter: {
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   gap4: {
     gap: 30,
@@ -154,4 +165,4 @@ export default StyleSheet.create({
   colorGrey: {
     color: COLORS.DARK_GREY,
   },
-});
+})
