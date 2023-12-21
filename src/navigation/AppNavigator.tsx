@@ -11,13 +11,14 @@ import {
   Profile,
   SignupScreen,
   OnBoarding1,
+  Home,
 } from "../pages/index"
 
 function AppNavigator(): JSX.Element {
   const AppStack = createNativeStackNavigator()
   return (
     <NavigationContainer>
-      <AppStack.Navigator initialRouteName={STACK.PROFILE}>
+      <AppStack.Navigator initialRouteName={STACK.WALKTHROUGH1}>
         {/* Walkthrough Stacks */}
         <AppStack.Screen
           name={STACK.WALKTHROUGH1}
@@ -40,6 +41,7 @@ function AppNavigator(): JSX.Element {
           options={{ headerShown: true }}
           component={LoginScreen}
         />
+        {/* LoginScreen */}
         <AppStack.Screen
           name={STACK.SIGN_UP}
           options={{ headerShown: true }}
@@ -61,6 +63,11 @@ function AppNavigator(): JSX.Element {
           name={STACK.PROFILE}
           options={{ headerShown: true }}
           component={Profile}
+        />
+        <AppStack.Screen
+          name={STACK.HOME}
+          options={{ headerShown: true }}
+          component={Home}
         />
       </AppStack.Navigator>
     </NavigationContainer>
