@@ -1,7 +1,6 @@
 import {StyleSheet} from 'react-native';
 
 import {COLORS} from './colors';
-import {Typography} from './typography';
 import {Constants, width} from './constants';
 
 export default StyleSheet.create({
@@ -13,15 +12,14 @@ export default StyleSheet.create({
     padding: Constants.GAP,
   },
 
-  title: Object.assign({}, Typography.heading3, {
+  title: {
     color: COLORS.BLACK,
-  }),
+  },
 
   contentContainer: {
     padding: Constants.GAP,
   },
 
-  content: Object.assign({}, Typography.bodyText),
   nextBtn: {
     borderBottomStartRadius: 30,
     borderTopStartRadius: 30,
@@ -94,6 +92,9 @@ export default StyleSheet.create({
   semiBold: {
     fontWeight: '800',
   },
+  textUP: {
+    textTransform: 'uppercase',
+  },
   textLG: {
     fontSize: 20,
   },
@@ -139,13 +140,24 @@ export default StyleSheet.create({
     height: 60,
     borderRadius: 10,
   },
+  profileIcon: {
+    width: 60,
+    height: 60,
+    borderRadius: 50,
+  },
   flex: {
     flexDirection: 'row',
   },
   ml5: {
     marginLeft: 5,
   },
+  ml15: {
+    marginLeft: 15,
+  },
   ml10: {
+    marginLeft: 10,
+  },
+  mb10: {
     marginLeft: 10,
   },
   justifyContentEvenly: {
@@ -173,7 +185,7 @@ export default StyleSheet.create({
     borderRadius: 15,
   },
   absolute: {
-    position: 'fixed',
+    position: 'absolute',
   },
   shadowMd: {
     elevation: 1,

@@ -1,72 +1,78 @@
-import React, {useEffect} from 'react';
-import LoginScreen from '../pages/Login';
+import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {STACK} from '../components/common/stackNames';
-import WalkthroughScreen1 from '../pages/Walkthrough/Walkthrough1';
-import WalkthroughScreen2 from '../pages/Walkthrough/Walkthrough2';
-import WalkthroughScreen3 from '../pages/Walkthrough/Walkthrough3';
-import {LogBox} from 'react-native';
 import SignUp from '../pages/Signup';
-import Otp from '../pages/Otp';
 import Home from '../pages/home/Home';
+import BuyMembership from "../pages/home/vendor/BuyMembership"
+
+import {Walkthrough1, Walkthrough2, Walkthrough3} from '../pages/Walkthrough';
+
+// LoginScreen,
+import {Otp, Profile, SignupScreen, OnBoarding1} from '../pages/index';
 
 function AppNavigator(): JSX.Element {
   const AppStack = createNativeStackNavigator();
-  useEffect(() => {
-    LogBox.ignoreLogs([
-      'In React 18, SSRProvider is not necessary and is a noop. You can remove it from your app.',
-    ]);
-  }, []);
-  // const linking = {
-  //   prefixes: [
-  //     /* your linking prefixes */
-  //   ],
-  //   config: {
-  //     /* configuration for matching screens with paths */
-  //   },
-  // };
   return (
     <NavigationContainer>
-      <AppStack.Navigator initialRouteName={STACK.LOGIN}>
+      <AppStack.Navigator initialRouteName={STACK.HOME}>
+        {/* Walkthrough Stacks */}
         <AppStack.Screen
           name={STACK.WALKTHROUGH1}
-          options={{headerShown: false}}
-          component={WalkthroughScreen1}
+          options={{ headerShown: false }}
+          component={Walkthrough1}
         />
         <AppStack.Screen
           name={STACK.WALKTHROUGH2}
-          options={{headerShown: false}}
-          component={WalkthroughScreen2}
+          options={{ headerShown: false }}
+          component={Walkthrough2}
         />
         <AppStack.Screen
           name={STACK.WALKTHROUGH3}
-          options={{headerShown: false}}
-          component={WalkthroughScreen3}
+          options={{ headerShown: false }}
+          component={Walkthrough3}
         />
+        {/* Auth Stacks */}
         <AppStack.Screen
           name={STACK.LOGIN}
-          options={{headerShown: true}}
-          component={Home}
+          options={{ headerShown: true }}
+          component={SignUp}
         />
         {/* LoginScreen */}
         <AppStack.Screen
           name={STACK.SIGN_UP}
-          options={{headerShown: true}}
-          component={SignUp}
+          options={{ headerShown: true }}
+          component={SignupScreen}
+        />
+        {/* Boarding Stacks */}
+        <AppStack.Screen
+          name={STACK.ONBOARDING1}
+          options={{ headerShown: true }}
+          component={OnBoarding1}
         />
         <AppStack.Screen
           name={STACK.OTP}
-          options={{headerShown: true}}
+          options={{ headerShown: true }}
           component={Otp}
         />
         <AppStack.Screen
+          name={STACK.PROFILE}
+          options={{ headerShown: true }}
+          component={Profile}
+        />
+        <AppStack.Screen
           name={STACK.HOME}
-          options={{headerShown: true}}
+          options={{ headerShown: true }}
           component={Home}
         />
+        <AppStack.Screen
+          name={STACK.BECOMEMEMBER}
+          options={{ headerShown: true }}
+          component={BuyMembership}
+        />
+        {/* Profile Stack */}
       </AppStack.Navigator>
     </NavigationContainer>
-  );
+  )
 }
 export default AppNavigator;

@@ -1,15 +1,15 @@
-import {StyleSheet} from 'react-native';
-import {isIos, normalize} from '../common/platform';
+import { StyleSheet } from "react-native"
+import { isIos, normalize } from "./platform"
 
 export const FONTS = {
-  BOLD: 'Gilroy-Bold',
-  LIGHT: 'Gilroy-Light',
-  THIN: 'Gilroy-Thin',
-  // EXTRA_BOLD: "Gilroy-ExtraBold",
-  REGULAR: 'Gilroy-Regular',
-  MEDIUM: 'Gilroy-Medium',
-  SEMI_BOLD: 'Gilroy-SemiBold',
-};
+  BOLD: "Gilroy-Bold",
+  LIGHT: "Gilroy-Light",
+  THIN: "Gilroy-Thin",
+  // SEMI_BOLD: "Gilroy-ExtraBold",
+  REGULAR: "Gilroy-Regular",
+  MEDIUM: "Gilroy-Medium",
+  SEMI_BOLD: "Gilroy-SemiBold",
+}
 
 export const Typography = StyleSheet.create({
   heading_1: {
@@ -26,7 +26,7 @@ export const Typography = StyleSheet.create({
     fontFamily: FONTS.MEDIUM,
     fontSize: normalize(18),
     lineHeight: normalize(18),
-    fontWeight: '500',
+    fontWeight: "500",
   },
   heading_4: {
     fontFamily: FONTS.SEMI_BOLD,
@@ -47,21 +47,21 @@ export const Typography = StyleSheet.create({
     fontFamily: FONTS.BOLD,
     fontSize: normalize(10),
     lineHeight: normalize(12),
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
 
   heading_8: {
     fontFamily: FONTS.BOLD,
     fontSize: normalize(10),
     lineHeight: normalize(12),
-    fontWeight: 'bold',
+    fontWeight: "bold",
     letterSpacing: normalize(0.5),
   },
   buttonText: {
     fontFamily: FONTS.SEMI_BOLD,
     fontSize: normalize(18),
     lineHeight: normalize(21),
-    fontWeight: '600',
+    fontWeight: "600",
   },
   title_1: {
     fontFamily: FONTS.BOLD,
@@ -79,7 +79,7 @@ export const Typography = StyleSheet.create({
     fontFamily: FONTS.MEDIUM,
     fontSize: normalize(12),
     lineHeight: normalize(14),
-    fontWeight: '500',
+    fontWeight: "500",
   },
   title_4: {
     fontFamily: FONTS.SEMI_BOLD,
@@ -91,7 +91,7 @@ export const Typography = StyleSheet.create({
     fontFamily: FONTS.MEDIUM,
     fontSize: normalize(10),
     lineHeight: normalize(12),
-    fontWeight: '500',
+    fontWeight: "500",
     letterSpacing: normalize(0.5),
   },
   title_6: {
@@ -99,46 +99,46 @@ export const Typography = StyleSheet.create({
     fontSize: normalize(18),
     lineHeight: normalize(21),
     letterSpacing: normalize(0.5),
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   title_7: {
     fontFamily: FONTS.BOLD,
     fontSize: normalize(16),
     lineHeight: normalize(19),
     letterSpacing: normalize(0.5),
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   navText: {
     fontFamily: FONTS.MEDIUM,
     fontSize: normalize(10),
     lineHeight: normalize(12),
-    fontWeight: '500',
+    fontWeight: "500",
     letterSpacing: normalize(0.5),
   },
   description: {
     fontFamily: FONTS.MEDIUM,
     fontSize: normalize(16),
     lineHeight: normalize(19),
-    fontWeight: '500',
+    fontWeight: "500",
   },
   placeholderText: {
     fontFamily: FONTS.MEDIUM,
     fontSize: normalize(14),
     lineHeight: normalize(16),
-    fontWeight: '500',
+    fontWeight: "500",
   },
   tagsText: {
-    fontFamily: FONTS.EXTRA_BOLD,
+    fontFamily: FONTS.SEMI_BOLD,
     fontSize: normalize(5),
     lineHeight: normalize(6),
-    fontWeight: '800',
+    fontWeight: "800",
   },
-  smallText: {
-    fontFamily: FONTS.EXTRA_BOLD,
-    fontSize: normalize(3),
-    lineHeight: normalize(4),
-    fontWeight: '800',
-  },
+  // smallText: {
+  //   fontFamily: FONTS.SEMI_BOLD,
+  //   fontSize: normalize(3),
+  //   lineHeight: normalize(4),
+  //   fontWeight: "800",
+  // },
   body: {
     fontFamily: FONTS.SEMI_BOLD,
     fontSize: normalize(12),
@@ -159,13 +159,13 @@ export const Typography = StyleSheet.create({
     fontSize: normalize(12),
     lineHeight: normalize(14),
     letterSpacing: normalize(4),
-    textTransform: 'uppercase',
+    textTransform: "uppercase",
   },
   smallText: {
-    fontFamily: isIos ? FONTS.BOLD : FONTS.EXTRA_BOLD,
+    fontFamily: isIos ? FONTS.BOLD : FONTS.SEMI_BOLD,
     fontSize: normalize(3),
     lineHeight: normalize(4),
-    fontWeight: '800',
+    fontWeight: "800",
   },
   caption: {
     fontFamily: FONTS.MEDIUM,
@@ -208,4 +208,4 @@ export const Typography = StyleSheet.create({
     lineHeight: normalize(9),
     letterSpacing: normalize(0.3),
   },
-});
+})

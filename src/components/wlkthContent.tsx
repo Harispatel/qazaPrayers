@@ -1,10 +1,10 @@
 /* eslint-disable prettier/prettier */
-import React from 'react';
-import {View} from 'react-native';
-import {GpButton, GpText} from '../components/elements';
-import styles from './common/styles';
-import {btnTypes, txtHead} from './common/constants';
-import {COLORS} from './common/colors';
+import React from "react"
+import { View } from "react-native"
+import { GpButton, GpImage, GpText } from "./elements"
+import styles from "./common/styles"
+import { btnTypes, txtHead } from "./common/constants"
+import { COLORS } from "./common/colors"
 
 export default function WkContainer(props) {
   return (
@@ -26,7 +26,8 @@ export default function WkContainer(props) {
             onPress={props?.handleSkip}
             style={{
               ...styles.skipBtn,
-            }}>
+            }}
+          >
             <GpText style={styles.skTxt}>Skip</GpText>
           </GpButton>
           <GpButton
@@ -36,11 +37,12 @@ export default function WkContainer(props) {
               ...styles.nextBtn,
               color: COLORS.WHITE,
               backgroundColor: COLORS.SUCCESS,
-            }}>
+            }}
+          >
             <GpText style={styles.wkTxt}>Next</GpText>
           </GpButton>
         </View>
       </View>
     </>
-  );
+  )
 }

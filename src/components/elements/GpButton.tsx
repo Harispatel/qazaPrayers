@@ -1,25 +1,28 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
-import {StyleSheet} from 'react-native';
-import {Button} from 'react-native-paper';
-import {COLORS} from '../common/colors';
+import { StyleSheet } from 'react-native';
+import { Button } from 'react-native-paper';
+import { COLORS } from '../common/colors';
 
-export default function GpButton(props: any) {
-  const {children, type} = props;
+export default function GpButton({ children, type, style, onPress }: any) {
+  // const {children, type} = props;
   return (
     <Button
-      {...props}
+      // {...props}
+      onPress={onPress}
       mode={type}
       uppercase={false}
       style={[
         btnStyle.buttonStyle,
         // eslint-disable-next-line react-native/no-inline-styles
         {
-          borderWidth: props?.type == 'outlined' ? 1 : 0,
-          borderColor: props?.type == 'outlined' ? COLORS.PRIMARY_TXT : null,
+          borderWidth: type === 'outlined' ? 1 : 0,
+          borderColor: type === 'outlined' ? COLORS.PRIMARY_TXT : null,
           zIndex: 2000,
         },
-        props.style,
-      ]}>
+        style,
+      ]}
+    >
       {children}
     </Button>
   );
