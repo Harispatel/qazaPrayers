@@ -3,7 +3,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {STACK} from '../components/common/stackNames';
 import SignUp from '../pages/Signup';
-import Home from '../pages/home/Home';
+import Home from "../pages/home/Home"
 import BuyMembership from "../pages/home/vendor/BuyMembership"
 
 import {Walkthrough1, Walkthrough2, Walkthrough3} from '../pages/Walkthrough';

@@ -1,12 +1,14 @@
-import {TouchableOpacity, View} from 'react-native';
-import React from 'react';
-import {GpImage, GpText} from '../../../components/elements';
-import styles from '../../../components/common/styles';
+import { TouchableOpacity, View } from "react-native"
+import React from "react"
+import { GpImage, GpText } from "../../../components/elements"
+import styles from "../../../components/common/styles"
 import { STACK } from "../../../components/common/stackNames"
+import { useNavigation } from "@react-navigation/native"
 
-const BecomeVendor: React.FC = ({ navigation }: any) => {
+const BecomeVendor: React.FC = () => {
+  const navigation = useNavigation()
   const handleMembership = () => {
-    console.log(navigation)
+    console.log(navigation, "navigation")
     navigation.navigate(STACK.BECOMEMEMBER)
   }
   return (

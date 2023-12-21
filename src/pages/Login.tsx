@@ -5,7 +5,7 @@ import { TextInput } from "react-native-paper"
 // Components
 import { STACK } from "../components/common/stackNames"
 import { GpButton, GpText, GpTextInput, GpImage } from "../components/elements"
-import { btnTypes, emailRegex, txtHead } from "../components/common/constants"
+import { btnTypes, txtHead } from "../components/common/constants"
 import styles from "../components/common/styles"
 import { IMAGES } from "../assets"
 

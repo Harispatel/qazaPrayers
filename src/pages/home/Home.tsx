@@ -1,17 +1,17 @@
-import {ScrollView, View} from 'react-native';
-import React from 'react';
+import { ScrollView, View } from "react-native"
+import React from "react"
 
 // !other import
-import {GpCard, GpText} from '../../components/elements';
-import {carCard, carCardT} from '../../utility/carCard';
-import {iconCard} from '../../utility/iconCard';
-import IconCard from './iconCard/IconCard';
-import styles from '../../components/common/styles';
-import VendorCard from './vendor/VendorCard';
-import {vendorCard, vendorCardT} from '../../utility/vendorCard';
-import BecomeVendor from './vendor/BecomeVendor';
+import { GpCard, GpText } from "../../components/elements"
+import { carCard, carCardT } from "../../utility/carCard"
+import { iconCard } from "../../utility/iconCard"
+import IconCard from "./iconCard/IconCard"
+import styles from "../../components/common/styles"
+import VendorCard from "./vendor/VendorCard"
+import { vendorCard, vendorCardT } from "../../utility/vendorCard"
+import BecomeVendor from "./vendor/BecomeVendor"
 
-const Home: React.FC = () => {
+export default function Home({ navigation }: any) {
   return (
     <ScrollView>
       <View style={[styles.contentContainer]}>
@@ -61,11 +61,9 @@ const Home: React.FC = () => {
           </ScrollView>
         </View>
         <View>
-          <BecomeVendor />
+          <BecomeVendor navigation={{ navigation }} />
         </View>
       </View>
     </ScrollView>
   )
 }
-
-export default Home
