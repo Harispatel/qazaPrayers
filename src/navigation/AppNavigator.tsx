@@ -18,7 +18,7 @@ function AppNavigator(): JSX.Element {
   const AppStack = createNativeStackNavigator()
   return (
     <NavigationContainer>
-      <AppStack.Navigator initialRouteName={STACK.WALKTHROUGH1}>
+      <AppStack.Navigator initialRouteName={STACK.PROFILE}>
         {/* Walkthrough Stacks */}
         <AppStack.Screen
           name={STACK.WALKTHROUGH1}

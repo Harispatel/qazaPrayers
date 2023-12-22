@@ -118,6 +118,9 @@ export default StyleSheet.create({
   mt15: {
     marginVertical: 15,
   },
+  mrH20: {
+    marginHorizontal: 20,
+  },
   mb15: {
     marginHorizontal: 15,
   },

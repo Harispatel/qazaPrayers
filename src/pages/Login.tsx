@@ -29,7 +29,7 @@ const LoginScreen: React.FC = ({ navigation }: any) => {
     //   return;
     // }
     console.log("Logging in with:", { username, password })
-    navigation.navigate(STACK.PROFILE)
+    navigation.navigate(STACK.HOME)
   }
   const handleNavigate = () => {
     navigation.navigate(STACK.SIGN_UP)
