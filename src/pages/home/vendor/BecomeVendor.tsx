@@ -8,7 +8,7 @@ import { useNavigation } from "@react-navigation/native"
 const BecomeVendor: React.FC = () => {
   const navigation = useNavigation()
   const handleMembership = () => {
-    navigation.navigate(STACK.BECOMEMEMBER)
+    navigation.navigate(STACK.BECOMEMEMBER as never)
   }
   return (
     <View>
@@ -28,7 +28,16 @@ const BecomeVendor: React.FC = () => {
       </GpText>
       <View>
         <TouchableOpacity onPress={handleMembership}>
-          <GpText style={[styles.semiBold, styles.textBlack, styles.textRight]}>
+          <GpText
+            style={[
+              styles.primaryColor,
+              styles.semiBold,
+              styles.textBlack,
+              styles.textRight,
+              styles.primaryColor,
+              styles.textMD,
+            ]}
+          >
             Know More
           </GpText>
         </TouchableOpacity>

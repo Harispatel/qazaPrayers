@@ -77,13 +77,13 @@ const LoginScreen: React.FC = ({ navigation }: any) => {
           onPress={handleLogin}
         >
           <GpText
-            style={{
-              ...styles.textBlack,
-              ...styles.buttonDarkText,
-              ...styles.textLG,
-              ...styles.semiBold,
-              ...styles.textUP,
-            }}
+            style={[
+              styles.textBlack,
+              styles.buttonDarkText,
+              styles.textLG,
+              styles.semiBold,
+              styles.textUP,
+            ]}
           >
             Login
           </GpText>

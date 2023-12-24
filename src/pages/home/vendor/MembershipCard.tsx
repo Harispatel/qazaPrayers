@@ -61,7 +61,7 @@ const MembershipCard = ({
             styles.textSlate,
           ]}
         >
-          $ {prise}
+          ${prise}
           <GpText
             style={[
               styles.textMD,
@@ -78,7 +78,7 @@ const MembershipCard = ({
         {benifits.map(({ name }: benifitsT, index: number) => {
           return (
             <View key={index} style={[styles.flex, styles.mt12, styles.gap3]}>
-              <Icon name="check" style={[styles.textBlack]} size={20} />
+              <Icon name="check" style={[styles.primaryColor]} size={20} />
               <GpText
                 style={[styles.textBlack, styles.textMD, styles.semiBold]}
               >

@@ -10,4 +10,5 @@ export const STACK = {
   OTP: "Otp",
   PROFILE: "Profile",
   BECOMEMEMBER: "BuyMembership",
+  VENDOR: "Vendor",
 }

@@ -171,6 +171,9 @@ export default StyleSheet.create({
   ml10: {
     marginLeft: 10,
   },
+  mtb10: {
+    marginVertical: 10,
+  },
   mb10: {
     marginLeft: 10,
   },
@@ -250,6 +253,9 @@ export default StyleSheet.create({
   roundedLG: {
     borderRadius: 15,
   },
+  roundedfull: {
+    borderRadius: 50,
+  },
   borderBottom: {
     borderBottomWidth: 0.5,
     paddingBottom: 10,
@@ -313,5 +319,9 @@ export default StyleSheet.create({
   },
   pb15: {
     paddingBottom: 15,
+  },
+  vendoListCard: { padding: 10, width: "100%", height: 70 },
+  p5: {
+    padding: 5,
   },
 })

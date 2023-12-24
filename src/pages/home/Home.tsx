@@ -1,4 +1,4 @@
-import { ScrollView, View } from "react-native"
+import { ScrollView, TouchableOpacity, View } from "react-native"
 import React from "react"
 
 // !other import
@@ -10,8 +10,12 @@ import styles from "../../components/common/styles"
 import VendorCard from "./vendor/VendorCard"
 import { vendorCard, vendorCardT } from "../../utility/vendorCard"
 import BecomeVendor from "./vendor/BecomeVendor"
+import { STACK } from "../../components/common/stackNames"
 
 export default function Home({ navigation }: any) {
+  const viewAllVendor = () => {
+    navigation.navigate(STACK.VENDOR)
+  }
   return (
     <ScrollView>
       <View style={[styles.contentContainer]}>
@@ -43,17 +47,24 @@ export default function Home({ navigation }: any) {
             )
           })}
         </View>
-        <View>
-          <GpText
-            style={[
-              styles.textBlack,
-              styles.textMD,
-              styles.semiBold,
-              styles.p10,
-            ]}
-          >
-            Recommended Vendor
-          </GpText>
+        <View style={[styles.mt30]}>
+          <View style={[styles.flex, styles.justifyContentBetween]}>
+            <GpText style={[styles.textBlack, styles.textLG, styles.semiBold]}>
+              Recommended Vendor
+            </GpText>
+            <TouchableOpacity onPress={viewAllVendor}>
+              <GpText
+                style={[
+                  styles.textBlack,
+                  styles.textMD,
+                  styles.semiBold,
+                  styles.primaryColor,
+                ]}
+              >
+                View All
+              </GpText>
+            </TouchableOpacity>
+          </View>
           <ScrollView>
             {vendorCard.map((item: vendorCardT, index: number) => {
               return <VendorCard key={index} />

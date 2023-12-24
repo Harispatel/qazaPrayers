@@ -11,13 +11,14 @@ const VendorCard = () => {
         styles.roundedLG,
         styles.vendorCard,
         styles.gary300,
-        styles.mb10,
-      ]}>
+        styles.mtb10,
+      ]}
+    >
       <View style={[styles.flex, styles.gap3]}>
         <GpImage
           style={styles.vendorIcon}
           source={{
-            uri: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D',
+            uri: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D",
           }}
           accessibilityLabel="AppleStore"
         />
@@ -29,7 +30,8 @@ const VendorCard = () => {
         </View>
       </View>
       <View
-        style={[styles.borderBottom, styles.flex, styles.gap3, styles.mt15]}>
+        style={[styles.borderBottom, styles.flex, styles.gap3, styles.mt15]}
+      >
         <View style={[styles.verfiy, styles.flex]}>
           <Feather
             style={styles.textWhite}
@@ -48,7 +50,7 @@ const VendorCard = () => {
           <GpImage
             style={styles.vendorBottomIcon}
             source={{
-              uri: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D',
+              uri: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D",
             }}
             accessibilityLabel="AppleStore"
           />
@@ -57,18 +59,14 @@ const VendorCard = () => {
           </GpText>
         </View>
         <GpText
-          style={[
-            styles.textBlack,
-            styles.mt5,
-            styles.textSM,
-            styles.semiBold,
-          ]}>
+          style={[styles.textBlack, styles.mt5, styles.textSM, styles.semiBold]}
+        >
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit cum,
           impedit maiores aliquam natus accusantium debitis sed iste
         </GpText>
       </View>
     </View>
-  );
+  )
 };
 
 export default VendorCard;

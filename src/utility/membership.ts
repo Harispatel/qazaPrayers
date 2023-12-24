@@ -18,7 +18,7 @@ export const memberhsip: membershipT[] = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim eveniet porro",
 
     prise: 3.5,
-    base: "month",
+    base: "4 month",
     benifits: [
       {
         name: "1-3 day turnaround",
@@ -36,7 +36,7 @@ export const memberhsip: membershipT[] = [
     button: "FREE",
   },
   {
-    tag: "Pro",
+    tag: " Pro",
     description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim eveniet porro",
 
