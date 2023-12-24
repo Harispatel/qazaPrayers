@@ -8,6 +8,7 @@ import { GpButton, GpText, GpTextInput, GpImage } from "../components/elements"
 import { btnTypes, emailRegex, txtHead } from "../components/common/constants"
 import styles from "../components/common/styles"
 import { IMAGES } from "../assets"
+import { COLORS } from "../components/common/colors"
 
 const LoginScreen: React.FC = ({ navigation }: any) => {
   const [username, setUsername] = useState("")
@@ -28,7 +29,7 @@ const LoginScreen: React.FC = ({ navigation }: any) => {
     //   return;
     // }
     console.log("Logging in with:", { username, password })
-    navigation.navigate(STACK.PROFILE)
+    navigation.navigate(STACK.HOME_TABS)
   }
   const handleNavigate = () => {
     navigation.navigate(STACK.SIGN_UP)
@@ -58,7 +59,7 @@ const LoginScreen: React.FC = ({ navigation }: any) => {
           right={
             // state.secureText ? (
             <TextInput.Icon
-              icon={{ uri: secureText ? IMAGES.EYE_OFF : IMAGES.EYE_ON }}
+              icon={secureText ? "eye" : "eye-off"}
               onPress={() => setSecureText(!secureText)}
             />
           }

@@ -5,18 +5,21 @@
  * @format
  */
 
-import React from 'react';
-import {theme} from './src/config/theme';
+import React from "react"
+import { theme } from "./src/config/theme"
 
-import AppNavigator from './src/navigation/AppNavigator';
-import {PaperProvider} from 'react-native-paper';
+import AppNavigator from "./src/navigation/AppNavigator"
+import { PaperProvider } from "react-native-paper"
+import { NavigationContainer } from "@react-navigation/native"
 
 function App(): JSX.Element {
   return (
     <PaperProvider theme={theme}>
-      <AppNavigator />
+      <NavigationContainer>
+        <AppNavigator />
+      </NavigationContainer>
     </PaperProvider>
-  );
+  )
 }
 
-export default App;
+export default App
