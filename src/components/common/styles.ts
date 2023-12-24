@@ -5,13 +5,15 @@ import {Constants, width} from './constants';
 
 export default StyleSheet.create({
   primaryColor: {
-    color: '#6CCA55',
+    color: "#6CCA55",
+  },
+  primaryBackground: {
+    backgroundColor: "#6CCA55",
   },
   titleContainer: {
     backgroundColor: COLORS.GREEN,
     padding: Constants.GAP,
   },
-
   title: {
     color: COLORS.BLACK,
   },
@@ -49,7 +51,7 @@ export default StyleSheet.create({
     color: COLORS.GREEN,
     marginTop: 10,
     fontSize: 20,
-    textAlign: 'center',
+    textAlign: "center",
   },
 
   logo: {
@@ -57,46 +59,49 @@ export default StyleSheet.create({
     height: 250,
   },
   description: {
-    textAlign: 'center',
+    textAlign: "center",
   },
   // Common Styling
   viewFlex: {
     flex: 1,
   },
   textBlack: {
-    color: 'black',
+    color: "black",
   },
   textInput: {
     borderWidth: 1,
-    borderColor: 'white',
-    width: '100%',
+    borderColor: "white",
+    width: "100%",
     height: 60,
-    backgroundColor: '#CDCDCD',
+    backgroundColor: "#CDCDCD",
     paddingHorizontal: 10,
     fontSize: 15,
   },
   buttonDark: {
-    backgroundColor: '#4D4D4D',
-    width: '100%',
+    backgroundColor: "#4D4D4D",
+    width: "100%",
     height: 60,
     borderRadius: 50,
   },
   buttonDarkText: {
-    textAlign: 'center',
+    textAlign: "center",
     marginVertical: 15,
-    color: 'white',
+    color: "white",
   },
   semiBold: {
-    fontWeight: '800',
+    fontWeight: "800",
   },
   textUP: {
-    textTransform: 'uppercase',
+    textTransform: "uppercase",
   },
   textLG: {
     fontSize: 20,
   },
   textXL: {
     fontSize: 28,
+  },
+  textXXL: {
+    fontSize: 38,
   },
   textMD: {
     fontSize: 15,
@@ -138,11 +143,11 @@ export default StyleSheet.create({
     paddingLeft: 10,
   },
   wt20: {
-    width: "25%",
+    width: "23%",
   },
   signUpIcon: {
-    width: '10%',
-    height: '10%',
+    width: "10%",
+    height: "10%",
   },
   loginIcon: {
     width: 60,
@@ -155,7 +160,7 @@ export default StyleSheet.create({
     borderRadius: 50,
   },
   flex: {
-    flexDirection: 'row',
+    flexDirection: "row",
   },
   ml5: {
     marginLeft: 5,
@@ -170,13 +175,13 @@ export default StyleSheet.create({
     marginLeft: 10,
   },
   justifyContentEvenly: {
-    justifyContent: 'space-evenly',
+    justifyContent: "space-evenly",
   },
   justifyContentBetween: {
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
   },
   justifyContentCenter: {
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   gap4: {
     gap: 30,
@@ -194,7 +199,7 @@ export default StyleSheet.create({
     borderRadius: 15,
   },
   absolute: {
-    position: 'absolute',
+    position: "absolute",
   },
   shadowMd: {
     elevation: 1,
@@ -268,11 +273,8 @@ export default StyleSheet.create({
   gary300: {
     backgroundColor: "#e5e7eb",
   },
-  mb10: {
-    marginVertical: 10,
-  },
   p10: {
-    paddingVertical: 10,
+    padding: 10,
   },
   overlayText: {
     fontSize: 15,
@@ -287,5 +289,29 @@ export default StyleSheet.create({
   },
   textWhite: {
     color: "white",
+  },
+  membershipCard: {
+    padding: 10,
+    width: 350,
+    height: 450,
+  },
+  p4: {
+    padding: 4,
+  },
+  textLightGray: {
+    color: "#4b5563",
+  },
+  textSlate: {
+    color: "#475569",
+  },
+  borderB: {
+    borderBottomWidth: 0.5,
+    borderColor: "##d1d5db",
+  },
+  mt12: {
+    marginTop: 12,
+  },
+  pb15: {
+    paddingBottom: 15,
   },
 })

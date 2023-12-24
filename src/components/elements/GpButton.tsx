@@ -4,7 +4,7 @@ import { StyleSheet } from "react-native"
 import { Button } from "react-native-paper"
 import { COLORS } from "../common/colors"
 
-export default function GpButton({ children, type, style, onPress }) {
+export default function GpButton({ children, type, style, onPress }: any) {
   // const {children, type} = props;
   return (
     <Button
@@ -16,8 +16,8 @@ export default function GpButton({ children, type, style, onPress }) {
         btnStyle.buttonStyle,
         // eslint-disable-next-line react-native/no-inline-styles
         {
-          borderWidth: type === 'outlined' ? 1 : 0,
-          borderColor: type === 'outlined' ? COLORS.PRIMARY_TXT : null,
+          borderWidth: type === "outlined" ? 1 : 0,
+          borderColor: type === "outlined" ? COLORS.PRIMARY_TXT : null,
           zIndex: 2000,
         },
         style,
@@ -25,7 +25,7 @@ export default function GpButton({ children, type, style, onPress }) {
     >
       {children}
     </Button>
-  );
+  )
 }
 
 const btnStyle = StyleSheet.create({

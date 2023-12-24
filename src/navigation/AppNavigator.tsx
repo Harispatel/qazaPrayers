@@ -53,7 +53,7 @@ function HomeScreenTabs() {
 function AppNavigator(): JSX.Element {
   const AppStack = createNativeStackNavigator();
   return (
-    <AppStack.Navigator initialRouteName={STACK.WALKTHROUGH}>
+    <AppStack.Navigator initialRouteName={STACK.BECOMEMEMBER}>
       {/* Walkthrough Stacks */}
       <AppStack.Screen
         name={STACK.WALKTHROUGH}
