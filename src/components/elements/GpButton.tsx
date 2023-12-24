@@ -1,10 +1,10 @@
 /* eslint-disable prettier/prettier */
-import React from 'react';
-import { StyleSheet } from 'react-native';
-import { Button } from 'react-native-paper';
-import { COLORS } from '../common/colors';
+import React from "react"
+import { StyleSheet } from "react-native"
+import { Button } from "react-native-paper"
+import { COLORS } from "../common/colors"
 
-export default function GpButton({ children, type, style, onPress }: any) {
+export default function GpButton({ children, type, style, onPress }) {
   // const {children, type} = props;
   return (
     <Button
@@ -32,8 +32,5 @@ const btnStyle = StyleSheet.create({
   buttonStyle: {
     textAlign: 'center',
     justifyContent: 'center',
-    // height: 46,
-    // borderRadius: 24,
-    // margin: normalize(8),
   },
 });

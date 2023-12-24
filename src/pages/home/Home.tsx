@@ -61,7 +61,7 @@ export default function Home({ navigation }: any) {
           </ScrollView>
         </View>
         <View>
-          <BecomeVendor navigation={{ navigation }} />
+          <BecomeVendor />
         </View>
       </View>
     </ScrollView>

@@ -25,7 +25,7 @@ export default StyleSheet.create({
     borderTopStartRadius: 30,
   },
   skipBtn: {
-    marginRight: width - 150,
+    marginRight: width - 200,
     color: COLORS.BLACK,
   },
   prevBtn: {
@@ -35,12 +35,9 @@ export default StyleSheet.create({
   },
   // Walkthrough Styling
   walkthroughContainer: {
-    flex: 1,
-    flexDirection: 'row',
-    width: '100%',
-    paddingBottom: 20,
-    justifyContent: 'flex-end',
-    alignItems: 'flex-end',
+    flexDirection: "row",
+    paddingTop: 100,
+    justifyContent: "flex-end",
   },
   wkTxt: {
     color: COLORS.WHITE,
@@ -116,6 +113,9 @@ export default StyleSheet.create({
   mt15: {
     marginVertical: 15,
   },
+  mrH20: {
+    marginHorizontal: 20,
+  },
   mb15: {
     marginHorizontal: 15,
   },
@@ -130,6 +130,15 @@ export default StyleSheet.create({
   },
   mt30: {
     marginVertical: 30,
+  },
+  pl20: {
+    paddingLeft: 20,
+  },
+  pl10: {
+    paddingLeft: 10,
+  },
+  wt20: {
+    width: "25%",
   },
   signUpIcon: {
     width: '10%',
@@ -191,23 +200,23 @@ export default StyleSheet.create({
     elevation: 1,
   },
   bold: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   center: {
-    textAlign: 'center',
+    textAlign: "center",
   },
   overlay: {
-    position: 'absolute',
+    position: "absolute",
     top: 190,
     bottom: 0,
     left: 20,
     right: 0,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   vendorIcon: {
     borderRadius: 50,
-    resizeMode: 'cover',
+    resizeMode: "cover",
     marginVertical: 2,
     width: 50,
     height: 50,
@@ -218,7 +227,7 @@ export default StyleSheet.create({
     height: 200,
   },
   underline: {
-    textDecorationLine: 'underline',
+    textDecorationLine: "underline",
   },
   font18: {
     fontSize: 16,
@@ -239,7 +248,7 @@ export default StyleSheet.create({
   borderBottom: {
     borderBottomWidth: 0.5,
     paddingBottom: 10,
-    borderColor: 'black',
+    borderColor: "black",
   },
   verfiy: {
     paddingTop: 6,
@@ -247,17 +256,17 @@ export default StyleSheet.create({
     paddingLeft: 12,
     paddingRight: 12,
     borderRadius: 15,
-    backgroundColor: '#6CCA55',
+    backgroundColor: "#6CCA55",
   },
   vendorBottomIcon: {
     borderRadius: 50,
-    resizeMode: 'cover',
+    resizeMode: "cover",
     marginVertical: 2,
     width: 20,
     height: 20,
   },
   gary300: {
-    backgroundColor: '#e5e7eb',
+    backgroundColor: "#e5e7eb",
   },
   mb10: {
     marginVertical: 10,
@@ -267,16 +276,16 @@ export default StyleSheet.create({
   },
   overlayText: {
     fontSize: 15,
-    fontWeight: '700',
+    fontWeight: "700",
   },
   becomeVendor: {
     width: 350,
     height: 350,
   },
   textRight: {
-    textAlign: 'right',
+    textAlign: "right",
   },
   textWhite: {
-    color: 'white',
+    color: "white",
   },
-});
+})
