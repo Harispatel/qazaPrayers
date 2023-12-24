@@ -13,7 +13,13 @@ export default function IconCard({
 }: CardViewT) {
   return (
     <View>
-      <GpCard cardStyle={[cardStyle]} width={width} height={height} url={url} />
+      <GpCard
+        cardStyle={[cardStyle]}
+        width={width}
+        height={height}
+        url={url}
+        imageStyle={undefined}
+      />
       <GpText
         style={[
           styles.center,
@@ -21,9 +27,10 @@ export default function IconCard({
           styles.bold,
           styles.textSM,
           styles.mb5,
-        ]}>
+        ]}
+      >
         {iconText}
       </GpText>
     </View>
-  );
+  )
 }

@@ -1,26 +1,43 @@
-import {TouchableOpacity, View} from 'react-native';
-import React from 'react';
-import {GpImage, GpText} from '../../../components/elements';
-import styles from '../../../components/common/styles';
+import { TouchableOpacity, View } from "react-native"
+import React from "react"
+import { GpImage, GpText } from "../../../components/elements"
+import styles from "../../../components/common/styles"
+import { STACK } from "../../../components/common/stackNames"
+import { useNavigation } from "@react-navigation/native"
 
-export default function BecomeVendor() {
+const BecomeVendor: React.FC = () => {
+  const navigation = useNavigation()
+  const handleMembership = () => {
+    navigation.navigate(STACK.BECOMEMEMBER as never)
+  }
   return (
     <View>
       <GpText
-        style={[styles.textBlack, styles.textXL, styles.semiBold, styles.p10]}>
+        style={[styles.textBlack, styles.textXL, styles.semiBold, styles.p10]}
+      >
         Find the easiest
         <GpText> recruitment of people</GpText>
         <GpText> with us</GpText>
       </GpText>
       <GpText
-        style={[styles.textBlack, styles.semiBold, styles.mb10, styles.mt5]}>
+        style={[styles.textBlack, styles.semiBold, styles.mb10, styles.mt5]}
+      >
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere dolorem
         iure eum, culpa sed error maiores dicta adipisci ipsum hic quam enim
         consequatur odio eius deleniti quis veniam. Tempora, ab.
       </GpText>
       <View>
-        <TouchableOpacity>
-          <GpText style={[styles.semiBold, styles.textBlack, styles.textRight]}>
+        <TouchableOpacity onPress={handleMembership}>
+          <GpText
+            style={[
+              styles.primaryColor,
+              styles.semiBold,
+              styles.textBlack,
+              styles.textRight,
+              styles.primaryColor,
+              styles.textMD,
+            ]}
+          >
             Know More
           </GpText>
         </TouchableOpacity>
@@ -28,10 +45,12 @@ export default function BecomeVendor() {
       <GpImage
         style={[styles.becomeVendor, styles.mb10, styles.mt5]}
         source={{
-          uri: 'https://i.postimg.cc/cHmVhFQ4/Wavy-Tech-14-Single-07-Photo-Room-png-Photo-Room.png',
+          uri: "https://i.postimg.cc/cHmVhFQ4/Wavy-Tech-14-Single-07-Photo-Room-png-Photo-Room.png",
         }}
         accessibilityLabel="AppleStore"
       />
     </View>
-  );
+  )
 }
+
+export default BecomeVendor

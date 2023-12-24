@@ -16,6 +16,8 @@ import {
 import GpIcons from "../components/elements/GpIcons"
 import { COLORS } from "../components/common/colors"
 import { Walkthrough } from "../pages/Walkthrough"
+import BuyMembership from "../pages/home/vendor/BuyMembership"
+import Vendor from "../pages/vendor/Index"
 
 function HomeScreenTabs() {
   const Tab = createBottomTabNavigator()
@@ -52,7 +54,7 @@ function HomeScreenTabs() {
 function AppNavigator(): JSX.Element {
   const AppStack = createNativeStackNavigator()
   return (
-    <AppStack.Navigator initialRouteName={STACK.WALKTHROUGH}>
+    <AppStack.Navigator initialRouteName={STACK.VENDOR}>
       {/* Walkthrough Stacks */}
       <AppStack.Screen
         name={STACK.WALKTHROUGH}
@@ -89,11 +91,21 @@ function AppNavigator(): JSX.Element {
         component={Profile}
       />
       <AppStack.Screen
+        name={STACK.BECOMEMEMBER}
+        options={{ headerShown: true }}
+        component={BuyMembership}
+      />
+      <AppStack.Screen
         name={STACK.HOME_TABS}
         options={{ headerShown: false }}
         component={HomeScreenTabs}
       />
+      <AppStack.Screen
+        name={STACK.VENDOR}
+        options={{ headerShown: true }}
+        component={Vendor}
+      />
     </AppStack.Navigator>
   )
 }
-export default AppNavigator
+export default AppNavigator;
