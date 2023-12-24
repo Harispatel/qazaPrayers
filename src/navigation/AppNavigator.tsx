@@ -4,7 +4,6 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 
 import { STACK } from "../components/common/stackNames"
-import { Walkthrough1, Walkthrough2, Walkthrough3 } from "../pages/Walkthrough"
 
 import {
   LoginScreen,
@@ -16,6 +15,7 @@ import {
 } from "../pages/index"
 import GpIcons from "../components/elements/GpIcons"
 import { COLORS } from "../components/common/colors"
+import { Walkthrough } from "../pages/Walkthrough"
 
 function HomeScreenTabs() {
   const Tab = createBottomTabNavigator()
@@ -52,22 +52,12 @@ function HomeScreenTabs() {
 function AppNavigator(): JSX.Element {
   const AppStack = createNativeStackNavigator()
   return (
-    <AppStack.Navigator initialRouteName={STACK.HOME_TABS}>
+    <AppStack.Navigator initialRouteName={STACK.WALKTHROUGH}>
       {/* Walkthrough Stacks */}
       <AppStack.Screen
-        name={STACK.WALKTHROUGH1}
+        name={STACK.WALKTHROUGH}
         options={{ headerShown: false }}
-        component={Walkthrough1}
-      />
-      <AppStack.Screen
-        name={STACK.WALKTHROUGH2}
-        options={{ headerShown: false }}
-        component={Walkthrough2}
-      />
-      <AppStack.Screen
-        name={STACK.WALKTHROUGH3}
-        options={{ headerShown: false }}
-        component={Walkthrough3}
+        component={Walkthrough}
       />
       {/* Auth Stacks */}
       <AppStack.Screen

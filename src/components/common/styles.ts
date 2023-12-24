@@ -27,7 +27,7 @@ export default StyleSheet.create({
     borderTopStartRadius: 30,
   },
   skipBtn: {
-    marginRight: width - 150,
+    marginRight: width - 200,
     color: COLORS.BLACK,
   },
   prevBtn: {
@@ -37,12 +37,9 @@ export default StyleSheet.create({
   },
   // Walkthrough Styling
   walkthroughContainer: {
-    flex: 1,
     flexDirection: "row",
-    width: "100%",
-    paddingBottom: 20,
+    paddingTop: 100,
     justifyContent: "flex-end",
-    alignItems: "flex-end",
   },
   wkTxt: {
     color: COLORS.WHITE,

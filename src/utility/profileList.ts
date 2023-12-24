@@ -10,17 +10,17 @@ export const profileList: profileListT[] = [
   {
     title: "My Profile",
     icon: "perm-identity",
-    navigateTo: STACK.WALKTHROUGH1,
+    navigateTo: STACK.WALKTHROUGH,
   },
   {
     title: "Notifications",
     icon: "notifications-none",
-    navigateTo: STACK.WALKTHROUGH2,
+    navigateTo: STACK.WALKTHROUGH,
   },
   {
     title: "Favorites",
     icon: "star-border",
-    navigateTo: STACK.WALKTHROUGH3,
+    navigateTo: STACK.WALKTHROUGH,
   },
   {
     title: "All Trips",
