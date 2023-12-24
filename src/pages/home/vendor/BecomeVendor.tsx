@@ -8,7 +8,6 @@ import { useNavigation } from "@react-navigation/native"
 const BecomeVendor: React.FC = () => {
   const navigation = useNavigation()
   const handleMembership = () => {
-    console.log(navigation, "navigation")
     navigation.navigate(STACK.BECOMEMEMBER)
   }
   return (

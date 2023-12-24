@@ -1,6 +1,6 @@
 import { Text, View } from "react-native"
 import React from "react"
-import { GpImage } from "../../../components/elements"
+import { GpImage, GpText } from "../../../components/elements"
 import styles from "../../../components/common/styles"
 
 export default function BuyMembership() {
@@ -13,6 +13,33 @@ export default function BuyMembership() {
         }}
         accessibilityLabel="AppleStore"
       />
+      <GpText
+        style={[
+          styles.center,
+          styles.textBlack,
+          styles.textLG,
+          styles.semiBold,
+          styles.p10,
+        ]}
+      >
+        Become a Vendor
+      </GpText>
+      <GpText
+        style={[styles.center, styles.textBlack, styles.textMD, styles.p10]}
+      >
+        Become a Vendor and start
+      </GpText>
+      <GpText
+        style={[
+          styles.center,
+          styles.textBlack,
+          styles.textMD,
+          styles.semiBold,
+        ]}
+      >
+        earning money
+      </GpText>
+      <GpText> with us</GpText>
     </View>
   )
 }
