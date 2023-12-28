@@ -1,9 +1,9 @@
-import React from "react"
-import { NavigationContainer } from "@react-navigation/native"
-import { createNativeStackNavigator } from "@react-navigation/native-stack"
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import { STACK } from "../components/common/stackNames"
+import { STACK } from "../components/common/stackNames";
 
 import {
   LoginScreen,
@@ -12,24 +12,26 @@ import {
   SignupScreen,
   OnBoarding1,
   Home,
-} from "../pages/index"
-import GpIcons from "../components/elements/GpIcons"
-import { COLORS } from "../components/common/colors"
-import { Walkthrough } from "../pages/Walkthrough"
+} from "../pages/index";
+import GpIcons from "../components/elements/GpIcons";
+import { COLORS } from "../components/common/colors";
+import { Walkthrough } from "../pages/Walkthrough";
+import PersonalInfo from "../pages/Profile/PersonalInfo";
+import Notifications from "../pages/Profile/Notifications";
 
 function HomeScreenTabs() {
-  const Tab = createBottomTabNavigator()
+  const Tab = createBottomTabNavigator();
 
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused }) => {
-          let iconName = ""
+          let iconName = "";
 
           if (route.name === STACK.HOME) {
-            iconName = focused ? "home-circle" : "home-circle-outline"
+            iconName = focused ? "home-circle" : "home-circle-outline";
           } else if (route.name === STACK.PROFILE) {
-            iconName = focused ? "account-check" : "account-check-outline"
+            iconName = focused ? "account-check" : "account-check-outline";
           }
           return (
             <GpIcons
@@ -38,21 +40,25 @@ function HomeScreenTabs() {
               name={iconName}
               size={30}
             />
-          )
+          );
         },
         tabBarActiveTintColor: COLORS.GREEN,
         tabBarInactiveTintColor: COLORS.DARK_GREY,
       })}
     >
       <Tab.Screen name={STACK.HOME} component={Home} />
-      <Tab.Screen name={STACK.PROFILE} component={Profile} />
+      <Tab.Screen
+        name={STACK.PROFILE}
+        component={Profile}
+        options={{ headerShown: true }}
+      />
     </Tab.Navigator>
-  )
+  );
 }
 function AppNavigator(): JSX.Element {
-  const AppStack = createNativeStackNavigator()
+  const AppStack = createNativeStackNavigator();
   return (
-    <AppStack.Navigator initialRouteName={STACK.WALKTHROUGH}>
+    <AppStack.Navigator initialRouteName={STACK.HOME_TABS}>
       {/* Walkthrough Stacks */}
       <AppStack.Screen
         name={STACK.WALKTHROUGH}
@@ -89,11 +95,21 @@ function AppNavigator(): JSX.Element {
         component={Profile}
       />
       <AppStack.Screen
+        name={STACK.PERSONAL_INFO}
+        options={{ headerShown: true }}
+        component={PersonalInfo}
+      />
+      <AppStack.Screen
+        name={STACK.NOTIFICATIONS}
+        options={{ headerShown: true }}
+        component={Notifications}
+      />
+      <AppStack.Screen
         name={STACK.HOME_TABS}
         options={{ headerShown: false }}
         component={HomeScreenTabs}
       />
     </AppStack.Navigator>
-  )
+  );
 }
-export default AppNavigator
+export default AppNavigator;

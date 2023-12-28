@@ -53,6 +53,8 @@ inner page
     chats
 
 user profile
+Personal info ==> Mobile Num, Name, Email (Disabled),
+Become and vendor ==> (Redirect to a Link) 
     image upload
 
     edit
@@ -69,7 +71,8 @@ preferences
 terms and condition
 app version 
 
-
-
-
-
+Bottom Tabs
+home
+Profile 
+Become a Vendor
+Messages

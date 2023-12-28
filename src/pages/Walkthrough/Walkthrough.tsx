@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React, { useState } from "react"
-import { Dimensions, ScrollView, StyleSheet, View } from "react-native"
+import { ScrollView, View } from "react-native"
 import { CommonActions } from "@react-navigation/native"
 
 // Components
@@ -8,7 +8,6 @@ import { STACK } from "../../components/common/stackNames"
 import styles from "../../components/common/styles"
 import { IMAGES } from "../../assets"
 import WkContainer from "../../components/wlkthContent"
-import { COLORS } from "../../components/common/colors"
 
 interface WalkthroughScreenProps {
   navigation: any
@@ -87,44 +86,8 @@ const Walkthrough: React.FC<WalkthroughScreenProps> = ({ navigation }) => {
           </View>
         )
       })}
-      {/* {screens?.map((screen, index) => (
-       
-      ))} */}
     </ScrollView>
   )
 }
 
-const style = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: COLORS.SECONDARY,
-  },
-  scrollView: {
-    width: Dimensions.get("window").width,
-  },
-  screen: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  title: {
-    fontSize: 24,
-    textAlign: "center",
-    margin: 10,
-  },
-  description: {
-    fontSize: 18,
-    textAlign: "center",
-    marginHorizontal: 20,
-    marginBottom: 10,
-  },
-  button: {
-    fontSize: 18,
-    textAlign: "center",
-    margin: 10,
-    color: "#007AFF",
-  },
-})
 export default Walkthrough

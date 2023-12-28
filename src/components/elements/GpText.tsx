@@ -3,7 +3,7 @@ import { Text } from "react-native"
 import { Typography } from "../common/typography"
 import { txtHead } from "../common/constants"
 
-const textComponent = (props) => {
+const textComponent = (props: any) => {
   return props.type === txtHead.heading1 ? (
     <Text accessible={true} style={{ ...Typography.heading1, ...props.style }}>
       {props.children}
@@ -23,6 +23,6 @@ const textComponent = (props) => {
   )
 }
 
-export default function GpText(props) {
+export default function GpText(props: any) {
   return textComponent(props)
 }

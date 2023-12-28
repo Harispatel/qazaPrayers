@@ -38,7 +38,7 @@ export default StyleSheet.create({
   // Walkthrough Styling
   walkthroughContainer: {
     flexDirection: "row",
-    paddingTop: 100,
+    paddingTop: 50,
     justifyContent: "flex-end",
   },
   wkTxt: {
@@ -269,6 +269,9 @@ export default StyleSheet.create({
   },
   mb10: {
     marginVertical: 10,
+  },
+  ph20: {
+    paddingHorizontal: 20,
   },
   p10: {
     paddingVertical: 10,

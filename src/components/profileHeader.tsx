@@ -1,14 +1,14 @@
 /* eslint-disable prettier/prettier */
-import React from "react"
-import { ImageBackground, StyleSheet, View } from "react-native"
-import { GpImage, GpText } from "./elements"
-import styles from "./common/styles"
-import { txtHead } from "./common/constants"
-import { COLORS } from "./common/colors"
-import { IMAGES } from "../assets"
-import { Divider, Menu } from "react-native-paper"
-import GpIcons from "./elements/GpIcons"
-import { ProfileHeadT } from "../utility/types/type"
+import React from "react";
+import { ImageBackground, StyleSheet, View } from "react-native";
+import { GpImage, GpText } from "./elements";
+import styles from "./common/styles";
+import { txtHead } from "./common/constants";
+import { COLORS } from "./common/colors";
+import { IMAGES } from "../assets";
+import { Divider, Menu } from "react-native-paper";
+import GpIcons from "./elements/GpIcons";
+import { ProfileHeadT } from "../utility/types/type";
 
 export default function ProfileHeader({
   visible,
@@ -63,7 +63,7 @@ export default function ProfileHeader({
         </View>
       </View>
     </ImageBackground>
-  )
+  );
 }
 const style = StyleSheet.create({
   container: {
@@ -94,4 +94,4 @@ const style = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
   },
-})
+});

@@ -9,4 +9,6 @@ export const STACK = {
   ONBOARDING3: "OnBoarding3",
   OTP: "Otp",
   PROFILE: "Profile",
-}
+  PERSONAL_INFO: "Personal Information",
+  NOTIFICATIONS: "Notifications",
+};
