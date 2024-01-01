@@ -16,6 +16,8 @@ import {
 import GpIcons from "../components/elements/GpIcons";
 import { COLORS } from "../components/common/colors";
 import { Walkthrough } from "../pages/Walkthrough";
+import BuyMembership from "../pages/home/vendor/BuyMembership";
+import Vendor from "../pages/vendor/Index";
 import PersonalInfo from "../pages/Profile/PersonalInfo";
 import Notifications from "../pages/Profile/Notifications";
 
@@ -105,9 +107,19 @@ function AppNavigator(): JSX.Element {
         component={Notifications}
       />
       <AppStack.Screen
+        name={STACK.BECOMEMEMBER}
+        options={{ headerShown: true }}
+        component={BuyMembership}
+      />
+      <AppStack.Screen
         name={STACK.HOME_TABS}
         options={{ headerShown: false }}
         component={HomeScreenTabs}
+      />
+      <AppStack.Screen
+        name={STACK.VENDOR}
+        options={{ headerShown: true }}
+        component={Vendor}
       />
     </AppStack.Navigator>
   );

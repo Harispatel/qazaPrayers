@@ -1,27 +1,28 @@
+/* eslint-disable prettier/prettier */
 import { StyleSheet } from "react-native";
 
 import { COLORS } from "./colors";
-import { Typography } from "./typography";
 import { Constants, width } from "./constants";
 
 export default StyleSheet.create({
   primaryColor: {
     color: "#6CCA55",
   },
+  primaryBackground: {
+    backgroundColor: "#6CCA55",
+  },
   titleContainer: {
     backgroundColor: COLORS.GREEN,
     padding: Constants.GAP,
   },
-
-  title: Object.assign({}, Typography.heading3, {
+  title: {
     color: COLORS.BLACK,
-  }),
+  },
 
   contentContainer: {
     padding: Constants.GAP,
   },
 
-  content: Object.assign({}, Typography.bodyText),
   nextBtn: {
     borderBottomStartRadius: 30,
     borderTopStartRadius: 30,
@@ -100,6 +101,9 @@ export default StyleSheet.create({
   textXL: {
     fontSize: 28,
   },
+  textXXL: {
+    fontSize: 38,
+  },
   textMD: {
     fontSize: 15,
   },
@@ -140,7 +144,7 @@ export default StyleSheet.create({
     paddingLeft: 10,
   },
   wt20: {
-    width: "25%",
+    width: "23%",
   },
   signUpIcon: {
     width: "10%",
@@ -164,6 +168,12 @@ export default StyleSheet.create({
   },
   ml15: {
     marginLeft: 15,
+  },
+  ml10: {
+    marginLeft: 10,
+  },
+  mtb10: {
+    marginVertical: 10,
   },
   mb10: {
     marginLeft: 10,
@@ -196,7 +206,7 @@ export default StyleSheet.create({
     borderRadius: 15,
   },
   absolute: {
-    position: "fixed",
+    position: "absolute",
   },
   shadowMd: {
     elevation: 1,
@@ -247,6 +257,9 @@ export default StyleSheet.create({
   roundedLG: {
     borderRadius: 15,
   },
+  roundedfull: {
+    borderRadius: 50,
+  },
   borderBottom: {
     borderBottomWidth: 0.5,
     paddingBottom: 10,
@@ -277,7 +290,7 @@ export default StyleSheet.create({
     paddingHorizontal: 20,
   },
   p10: {
-    paddingVertical: 10,
+    padding: 10,
   },
   overlayText: {
     fontSize: 15,
@@ -292,5 +305,33 @@ export default StyleSheet.create({
   },
   textWhite: {
     color: "white",
+  },
+  membershipCard: {
+    padding: 10,
+    width: 350,
+    height: 450,
+  },
+  p4: {
+    padding: 4,
+  },
+  textLightGray: {
+    color: "#4b5563",
+  },
+  textSlate: {
+    color: "#475569",
+  },
+  borderB: {
+    borderBottomWidth: 0.5,
+    borderColor: "##d1d5db",
+  },
+  mt12: {
+    marginTop: 12,
+  },
+  pb15: {
+    paddingBottom: 15,
+  },
+  vendoListCard: { padding: 10, width: "100%", height: 70 },
+  p5: {
+    padding: 5,
   },
 });

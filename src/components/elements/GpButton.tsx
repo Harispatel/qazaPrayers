@@ -44,8 +44,5 @@ const btnStyle = StyleSheet.create({
   buttonStyle: {
     textAlign: "center",
     justifyContent: "center",
-    // height: 46,
-    // borderRadius: 24,
-    // margin: normalize(8),
   },
 });
