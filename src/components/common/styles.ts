@@ -1,8 +1,8 @@
-import { StyleSheet } from "react-native"
+import { StyleSheet } from "react-native";
 
-import { COLORS } from "./colors"
-import { Typography } from "./typography"
-import { Constants, width } from "./constants"
+import { COLORS } from "./colors";
+import { Typography } from "./typography";
+import { Constants, width } from "./constants";
 
 export default StyleSheet.create({
   primaryColor: {
@@ -177,6 +177,9 @@ export default StyleSheet.create({
   justifyContentCenter: {
     justifyContent: "center",
   },
+  alignContentCenter: {
+    alignItems: "center",
+  },
   gap4: {
     gap: 30,
   },
@@ -290,4 +293,4 @@ export default StyleSheet.create({
   textWhite: {
     color: "white",
   },
-})
+});

@@ -39,14 +39,24 @@ const NoNotificationsCard: React.FC<NoNotificationsCardScreenProps> = ({
       />
       <Card.Actions>
         <GpButton
+          type={btnTypes.text}
+          style={[styles.buttonDark, styles.mt15]}
           onPress={handleBack}
-          type={btnTypes.outlined}
-          style={undefined}
-          btnIcon={"chevron-left"}
+          btnIcon={undefined}
           disabled={false}
-          isUpperCase={true}
+          isUpperCase={false}
         >
-          Go Back
+          <GpText
+            style={{
+              ...styles.textBlack,
+              ...styles.buttonDarkText,
+              ...styles.textLG,
+              ...styles.semiBold,
+              ...styles.textUP,
+            }}
+          >
+            Go Back
+          </GpText>
         </GpButton>
       </Card.Actions>
     </Card>
