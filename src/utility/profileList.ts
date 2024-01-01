@@ -41,7 +41,7 @@ export const benefitList: benefitListT[] = [
   {
     title: "Rewards",
     icon: "shopping-basket",
-    navigateTo: STACK.WALKTHROUGH,
+    navigateTo: STACK.HOME_TABS,
   },
 ];
 
@@ -49,12 +49,12 @@ export const supportList: supportListT[] = [
   {
     title: "Rate This App",
     icon: "star-border",
-    navigateTo: STACK.WALKTHROUGH,
+    navigateTo: STACK.HOME_TABS,
   },
   {
     title: "Become a Vendor",
     icon: "person-add-alt-1",
-    navigateTo: STACK.WALKTHROUGH,
+    navigateTo: STACK.VENDOR,
   },
 ];
 
@@ -62,6 +62,6 @@ export const preferencesList: preferencesListT[] = [
   {
     title: "City Selection",
     icon: "location-on",
-    navigateTo: STACK.WALKTHROUGH,
+    navigateTo: STACK.HOME_TABS,
   },
 ];
