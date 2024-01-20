@@ -34,6 +34,8 @@ function HomeScreenTabs() {
             iconName = focused ? "home-circle" : "home-circle-outline";
           } else if (route.name === STACK.PROFILE) {
             iconName = focused ? "account-check" : "account-check-outline";
+          } else if (route.name === STACK.BECOMEMEMBER) {
+            iconName = focused ? "account-convert" : "account-convert-outline";
           }
           return (
             <GpIcons
@@ -49,11 +51,12 @@ function HomeScreenTabs() {
       })}
     >
       <Tab.Screen name={STACK.HOME} component={Home} />
-      <Tab.Screen
+      {/* <Tab.Screen name={STACK.BECOMEMEMBER} component={BuyMembership} /> */}
+      {/* <Tab.Screen
         name={STACK.PROFILE}
         component={Profile}
         options={{ headerShown: true }}
-      />
+      /> */}
     </Tab.Navigator>
   );
 }

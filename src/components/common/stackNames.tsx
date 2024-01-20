@@ -11,6 +11,6 @@ export const STACK = {
   PROFILE: "Profile",
   PERSONAL_INFO: "Personal Information",
   NOTIFICATIONS: "Notifications",
-  BECOMEMEMBER: "BuyMembership",
+  BECOMEMEMBER: "Buy Membership",
   VENDOR: "Vendor",
 };

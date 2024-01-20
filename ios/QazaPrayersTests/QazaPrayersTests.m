@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface GoodPickTests : XCTestCase
+@interface QazaPrayersTests : XCTestCase
 
 @end
 
-@implementation GoodPickTests
+@implementation QazaPrayersTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL (^)(UIView *view))test
 {

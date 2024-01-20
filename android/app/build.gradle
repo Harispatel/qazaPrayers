@@ -73,9 +73,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.goodpick"
+    namespace "com.qazaprayers"
     defaultConfig {
-        applicationId "com.goodpick"
+        applicationId "com.qazaprayers"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

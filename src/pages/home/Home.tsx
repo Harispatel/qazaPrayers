@@ -1,25 +1,25 @@
-import { ScrollView, TouchableOpacity, View } from "react-native"
-import React from "react"
+import { ScrollView, TouchableOpacity, View } from "react-native";
+import React from "react";
 
 // !other import
-import { GpCard, GpText } from "../../components/elements"
-import { carCard, carCardT } from "../../utility/carCard"
-import { iconCard } from "../../utility/iconCard"
-import IconCard from "./iconCard/IconCard"
-import styles from "../../components/common/styles"
-import VendorCard from "./vendor/VendorCard"
-import { vendorCard, vendorCardT } from "../../utility/vendorCard"
-import BecomeVendor from "./vendor/BecomeVendor"
-import { STACK } from "../../components/common/stackNames"
+import { GpCard, GpText } from "../../components/elements";
+import { carCard, carCardT } from "../../utility/carCard";
+import { iconCard } from "../../utility/iconCard";
+import IconCard from "./iconCard/IconCard";
+import styles from "../../components/common/styles";
+import VendorCard from "./vendor/VendorCard";
+import { vendorCard, vendorCardT } from "../../utility/vendorCard";
+import BecomeVendor from "./vendor/BecomeVendor";
+import { STACK } from "../../components/common/stackNames";
 
 export default function Home({ navigation }: any) {
   const viewAllVendor = () => {
-    navigation.navigate(STACK.VENDOR)
-  }
+    navigation.navigate(STACK.VENDOR);
+  };
   return (
     <ScrollView>
       <View style={[styles.contentContainer]}>
-        <ScrollView horizontal={true} style={[styles.flex]}>
+        {/* <ScrollView horizontal={true} style={[styles.flex]}>
           {carCard.map(({ url, name }: carCardT, index: number) => {
             return (
               <GpCard
@@ -32,8 +32,8 @@ export default function Home({ navigation }: any) {
               />
             )
           })}
-        </ScrollView>
-        <View style={[styles.mt15, styles.flex, styles.justifyContentEvenly]}>
+        </ScrollView> */}
+        {/* <View style={[styles.mt15, styles.flex, styles.justifyContentEvenly]}>
           {iconCard.map(({ image, name }, index: number) => {
             return (
               <IconCard
@@ -44,10 +44,10 @@ export default function Home({ navigation }: any) {
                 url={image}
                 iconText={name}
               />
-            )
+            );
           })}
-        </View>
-        <View style={[styles.mt30]}>
+        </View> */}
+        {/* <View style={[styles.mt30]}>
           <View style={[styles.flex, styles.justifyContentBetween]}>
             <GpText style={[styles.textBlack, styles.textLG, styles.semiBold]}>
               Recommended Vendor
@@ -67,14 +67,14 @@ export default function Home({ navigation }: any) {
           </View>
           <ScrollView>
             {vendorCard.map((item: vendorCardT, index: number) => {
-              return <VendorCard key={index} />
+              return <VendorCard key={index} />;
             })}
           </ScrollView>
-        </View>
-        <View>
+        </View> */}
+        {/* <View>
           <BecomeVendor />
-        </View>
+        </View> */}
       </View>
     </ScrollView>
-  )
+  );
 }

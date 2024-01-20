@@ -1,4 +1,4 @@
-package com.goodpick;
+package com.qazaprayers;
 // import com.oblador.vectoricons.VectorIconsPackage;
 
 import android.app.Application;
