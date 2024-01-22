@@ -1,8 +1,8 @@
-import GpButton from './GpButton';
-import GpImage from './GpImage';
-import GpText from './GpText';
-import GpTextInput from './GpTextInput';
-import GpScrollView from './GpScrollView';
-import GpCard from './GpCard';
+import QpButton from "./QpButton";
+import QpImage from "./QpImage";
+import QpText from "./QpText";
+import QpTextInput from "./QpTextInput";
+import QpScrollView from "./QpScrollView";
+import QpCard from "./QpCard";
 
-export {GpButton, GpText, GpTextInput, GpImage, GpScrollView, GpCard};
+export { QpButton, QpText, QpTextInput, QpImage, QpScrollView, QpCard };

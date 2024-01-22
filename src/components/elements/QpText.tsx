@@ -1,7 +1,7 @@
-import React from "react"
-import { Text } from "react-native"
-import { Typography } from "../common/typography"
-import { txtHead } from "../common/constants"
+import React from "react";
+import { Text } from "react-native";
+import { Typography } from "../common/typography";
+import { txtHead } from "../common/constants";
 
 const textComponent = (props: any) => {
   return props.type === txtHead.heading1 ? (
@@ -20,9 +20,9 @@ const textComponent = (props: any) => {
     <Text {...props} accessible={true} style={props.style}>
       {props.children}
     </Text>
-  )
-}
+  );
+};
 
-export default function GpText(props: any) {
-  return textComponent(props)
+export default function QpText(props: any) {
+  return textComponent(props);
 }

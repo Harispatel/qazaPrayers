@@ -1,12 +1,12 @@
 /* eslint-disable prettier/prettier */
-import React from "react"
-import { ImageBackground, View } from "react-native"
-import { GpButton, GpImage, GpText } from "./elements"
-import styles from "./common/styles"
-import { btnTypes, txtHead } from "./common/constants"
-import { COLORS } from "./common/colors"
-import GpIcons from "./elements/GpIcons"
-import { IMAGES } from "../assets"
+import React from "react";
+import { ImageBackground, View } from "react-native";
+import { QpButton, QpImage, QpText } from "./elements";
+import styles from "./common/styles";
+import { btnTypes, txtHead } from "./common/constants";
+import { COLORS } from "./common/colors";
+import QpIcons from "./elements/QpIcons";
+import { IMAGES } from "../assets";
 
 export default function WkContainer(props) {
   return (
@@ -17,7 +17,7 @@ export default function WkContainer(props) {
         style={styles.logo}
       >
         {props?.currentScreen >= 1 ? (
-          <GpIcons
+          <QpIcons
             onPress={props?.handlePrevious}
             type={"Feather"}
             name={"chevron-left"}
@@ -34,20 +34,20 @@ export default function WkContainer(props) {
           ...styles.p10,
         }}
       >
-        <GpImage
+        <QpImage
           style={styles.logo}
           resizeMode="contain"
           source={props?.image}
         />
-        <GpText type={txtHead.heading2} style={styles.description}>
+        <QpText type={txtHead.heading2} style={styles.description}>
           {props?.title}
-        </GpText>
-        <GpText type={txtHead.heading6} style={styles.description}>
+        </QpText>
+        <QpText type={txtHead.heading6} style={styles.description}>
           {props?.description}
-        </GpText>
+        </QpText>
       </View>
       <View style={styles.walkthroughContainer}>
-        <GpButton
+        <QpButton
           type={btnTypes.contained}
           onPress={props?.handleNext}
           style={{
@@ -56,9 +56,9 @@ export default function WkContainer(props) {
             backgroundColor: COLORS.SUCCESS,
           }}
         >
-          <GpText style={styles.wkTxt}>{props.buttonText}</GpText>
-        </GpButton>
+          <QpText style={styles.wkTxt}>{props.buttonText}</QpText>
+        </QpButton>
       </View>
     </>
-  )
+  );
 }

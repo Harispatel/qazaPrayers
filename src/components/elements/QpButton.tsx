@@ -3,10 +3,10 @@ import React from "react";
 import { StyleSheet } from "react-native";
 import { Button } from "react-native-paper";
 import { COLORS } from "../common/colors";
-import { GpButtonT } from "../../utility/types/type";
+import { QpButtonT } from "../../utility/types/type";
 import { btnTypes } from "../common/constants";
 
-export default function GpButton({
+export default function QpButton({
   children,
   type,
   style,
@@ -14,7 +14,7 @@ export default function GpButton({
   btnIcon,
   disabled = false,
   isUpperCase = false,
-}: GpButtonT) {
+}: QpButtonT) {
   // const {children, type} = props;
   return (
     <Button

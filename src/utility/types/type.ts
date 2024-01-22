@@ -14,8 +14,24 @@ export type ProfileHeadT = {
   openMenu: any;
   userData: any;
 };
+export type DOBManagerT = {
+  isModalVisible: any;
+  handleAction: any;
+  dateValue: any;
+  setDateValue: any;
+};
 
-export type GpButtonT = {
+export type QpModalT = {
+  children: any;
+  containerStyle: any;
+  isModalVisible: any;
+  modalStyles: any;
+  onBackButtonPress: any;
+  onBackdropPress: any;
+  style: any;
+};
+
+export type QpButtonT = {
   children: any;
   type: any;
   style: any;

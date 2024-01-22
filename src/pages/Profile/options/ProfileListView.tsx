@@ -1,26 +1,26 @@
-import { Pressable, View } from "react-native"
-import React from "react"
-import styles from "../../../components/common/styles"
-import { GpImage, GpText } from "../../../components/elements"
-import Feather from "react-native-vector-icons/Feather"
-import GpIcons from "../../../components/elements/GpIcons"
-import { COLORS } from "../../../components/common/colors"
+import { Pressable, View } from "react-native";
+import React from "react";
+import styles from "../../../components/common/styles";
+import { QpImage, QpText } from "../../../components/elements";
+import Feather from "react-native-vector-icons/Feather";
+import QpIcons from "../../../components/elements/QpIcons";
+import { COLORS } from "../../../components/common/colors";
 export type profileViewT = {
-  item: any
-  handleNavigation: any
-}
+  item: any;
+  handleNavigation: any;
+};
 const ProfileListView = ({ item, handleNavigation }: profileViewT) => {
   return (
     <Pressable onPress={() => handleNavigation(item.navigateTo)}>
       <View style={[styles.flex, styles.gap3, styles.mt15]}>
-        <GpIcons
+        <QpIcons
           style={styles.mrH20}
           type={"MaterialIcons"}
           name={item?.icon}
           color={COLORS.GREEN}
           size={30}
         />
-        <GpText
+        <QpText
           style={{
             ...styles.viewFlex,
             ...styles.textBlack,
@@ -30,8 +30,8 @@ const ProfileListView = ({ item, handleNavigation }: profileViewT) => {
           }}
         >
           {item?.title}
-        </GpText>
-        <GpIcons
+        </QpText>
+        <QpIcons
           style={{
             color: COLORS.DARK_GREY,
           }}
@@ -42,7 +42,7 @@ const ProfileListView = ({ item, handleNavigation }: profileViewT) => {
         />
       </View>
     </Pressable>
-  )
-}
+  );
+};
 
-export default ProfileListView
+export default ProfileListView;

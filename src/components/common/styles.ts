@@ -2,7 +2,7 @@
 import { StyleSheet } from "react-native";
 
 import { COLORS } from "./colors";
-import { Constants, width } from "./constants";
+import { Constants, height, width } from "./constants";
 
 export default StyleSheet.create({
   primaryColor: {
@@ -79,10 +79,11 @@ export default StyleSheet.create({
     fontSize: 15,
   },
   buttonDark: {
-    backgroundColor: "#4D4D4D",
-    width: "100%",
-    height: 60,
-    borderRadius: 50,
+    backgroundColor: COLORS.GREEN,
+    // width: width / 3,
+    // height: 60,
+    padding: 10,
+    borderRadius: 20,
   },
   buttonDarkText: {
     textAlign: "center",
@@ -333,5 +334,11 @@ export default StyleSheet.create({
   vendoListCard: { padding: 10, width: "100%", height: 70 },
   p5: {
     padding: 5,
+  },
+  modalStyle: {
+    width: width / 1.05,
+    padding: 20,
+    borderRadius: 20,
+    height: height / 1.7,
   },
 });

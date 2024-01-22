@@ -5,19 +5,10 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import { STACK } from "../components/common/stackNames";
 
-import {
-  LoginScreen,
-  Otp,
-  Profile,
-  SignupScreen,
-  OnBoarding1,
-  Home,
-} from "../pages/index";
-import GpIcons from "../components/elements/GpIcons";
+import { LoginScreen, Otp, Profile, SignupScreen, Home } from "../pages/index";
+import QpIcons from "../components/elements/QpIcons";
 import { COLORS } from "../components/common/colors";
 import { Walkthrough } from "../pages/Walkthrough";
-import BuyMembership from "../pages/home/vendor/BuyMembership";
-import Vendor from "../pages/vendor/Index";
 import PersonalInfo from "../pages/Profile/PersonalInfo";
 import Notifications from "../pages/Profile/Notifications";
 
@@ -38,7 +29,7 @@ function HomeScreenTabs() {
             iconName = focused ? "account-convert" : "account-convert-outline";
           }
           return (
-            <GpIcons
+            <QpIcons
               style={{ color: focused ? COLORS.GREEN : COLORS.DARK_GREY }}
               type={"MaterialCommunityIcons"}
               name={iconName}
@@ -51,12 +42,11 @@ function HomeScreenTabs() {
       })}
     >
       <Tab.Screen name={STACK.HOME} component={Home} />
-      {/* <Tab.Screen name={STACK.BECOMEMEMBER} component={BuyMembership} /> */}
-      {/* <Tab.Screen
+      <Tab.Screen
         name={STACK.PROFILE}
         component={Profile}
         options={{ headerShown: true }}
-      /> */}
+      />
     </Tab.Navigator>
   );
 }
@@ -84,11 +74,6 @@ function AppNavigator(): JSX.Element {
       />
       {/* Boarding Stacks */}
       <AppStack.Screen
-        name={STACK.ONBOARDING1}
-        options={{ headerShown: true }}
-        component={OnBoarding1}
-      />
-      <AppStack.Screen
         name={STACK.OTP}
         options={{ headerShown: true }}
         component={Otp}
@@ -109,20 +94,11 @@ function AppNavigator(): JSX.Element {
         options={{ headerShown: true }}
         component={Notifications}
       />
-      <AppStack.Screen
-        name={STACK.BECOMEMEMBER}
-        options={{ headerShown: true }}
-        component={BuyMembership}
-      />
+
       <AppStack.Screen
         name={STACK.HOME_TABS}
         options={{ headerShown: false }}
         component={HomeScreenTabs}
-      />
-      <AppStack.Screen
-        name={STACK.VENDOR}
-        options={{ headerShown: true }}
-        component={Vendor}
       />
     </AppStack.Navigator>
   );

@@ -6,8 +6,8 @@ import React from "react";
 import styles from "./common/styles";
 import { btnTypes, txtHead } from "./common/constants";
 import { Card } from "react-native-paper";
-import { GpButton, GpText } from "./elements";
-import GpIcons from "./elements/GpIcons";
+import { QpButton, QpText } from "./elements";
+import QpIcons from "./elements/QpIcons";
 import { COLORS } from "./common/colors";
 
 interface NoNotificationsCardScreenProps {
@@ -24,13 +24,13 @@ const NoNotificationsCard: React.FC<NoNotificationsCardScreenProps> = ({
   return (
     <Card style={[styles.flex, styles.justifyContentCenter]}>
       <Card.Content>
-        <GpText type={txtHead.heading3}>No Notifications yet</GpText>
-        <GpText type={txtHead.heading6}>
+        <QpText type={txtHead.heading3}>No Notifications yet</QpText>
+        <QpText type={txtHead.heading6}>
           When you get notifications, They'll show up here
-        </GpText>
+        </QpText>
       </Card.Content>
 
-      <GpIcons
+      <QpIcons
         style={styles.mrH20}
         type={"MaterialIcons"}
         name={"circle-notifications"}
@@ -38,7 +38,7 @@ const NoNotificationsCard: React.FC<NoNotificationsCardScreenProps> = ({
         size={300}
       />
       <Card.Actions>
-        <GpButton
+        <QpButton
           type={btnTypes.text}
           style={[styles.buttonDark, styles.mt15]}
           onPress={handleBack}
@@ -46,7 +46,7 @@ const NoNotificationsCard: React.FC<NoNotificationsCardScreenProps> = ({
           disabled={false}
           isUpperCase={false}
         >
-          <GpText
+          <QpText
             style={{
               ...styles.textBlack,
               ...styles.buttonDarkText,
@@ -56,8 +56,8 @@ const NoNotificationsCard: React.FC<NoNotificationsCardScreenProps> = ({
             }}
           >
             Go Back
-          </GpText>
-        </GpButton>
+          </QpText>
+        </QpButton>
       </Card.Actions>
     </Card>
   );

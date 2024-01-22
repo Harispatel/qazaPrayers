@@ -1,13 +1,13 @@
 /* eslint-disable prettier/prettier */
 import React from "react";
 import { ImageBackground, StyleSheet, View } from "react-native";
-import { GpImage, GpText } from "./elements";
+import { QpImage, QpText } from "./elements";
 import styles from "./common/styles";
 import { txtHead } from "./common/constants";
 import { COLORS } from "./common/colors";
 import { IMAGES } from "../assets";
 import { Divider, Menu } from "react-native-paper";
-import GpIcons from "./elements/GpIcons";
+import QpIcons from "./elements/QpIcons";
 import { ProfileHeadT } from "../utility/types/type";
 
 export default function ProfileHeader({
@@ -27,7 +27,7 @@ export default function ProfileHeader({
           visible={visible}
           onDismiss={closeMenu}
           anchor={
-            <GpIcons
+            <QpIcons
               onPress={openMenu}
               type={"MaterialIcons"}
               name={"more-vert"}
@@ -45,21 +45,21 @@ export default function ProfileHeader({
       </View>
 
       <View style={{ ...style.profileCard, ...styles.viewFlex }}>
-        <GpImage
+        <QpImage
           style={styles.profileIcon}
           source={{ uri: userData?.image }}
           accessibilityLabel="AppleStore"
         />
         <View>
-          <GpText
+          <QpText
             type={txtHead.heading3}
             style={{ ...styles.ml15, ...styles.mb10 }}
           >
             {userData?.name}
-          </GpText>
-          <GpText type={txtHead.heading6} style={{ ...styles.ml15 }}>
+          </QpText>
+          <QpText type={txtHead.heading6} style={{ ...styles.ml15 }}>
             {userData.designation}
-          </GpText>
+          </QpText>
         </View>
       </View>
     </ImageBackground>

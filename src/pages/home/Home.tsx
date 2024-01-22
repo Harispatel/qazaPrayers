@@ -1,79 +1,40 @@
-import { ScrollView, TouchableOpacity, View } from "react-native";
-import React from "react";
+import { ScrollView, View } from "react-native";
+import React, { useState } from "react";
+import dayjs from "dayjs";
+import moment from "moment";
 
 // !other import
-import { GpCard, GpText } from "../../components/elements";
-import { carCard, carCardT } from "../../utility/carCard";
-import { iconCard } from "../../utility/iconCard";
-import IconCard from "./iconCard/IconCard";
 import styles from "../../components/common/styles";
-import VendorCard from "./vendor/VendorCard";
-import { vendorCard, vendorCardT } from "../../utility/vendorCard";
-import BecomeVendor from "./vendor/BecomeVendor";
-import { STACK } from "../../components/common/stackNames";
+import DOBManager from "../../components/dobManager";
+import { DOBManagerT } from "../../utility/types/type";
+import { QpText } from "../../components/elements";
+import { txtHead } from "../../components/common/constants";
 
 export default function Home({ navigation }: any) {
-  const viewAllVendor = () => {
-    navigation.navigate(STACK.VENDOR);
+  // const [user, setUser] = useState<dateType>({name: 'Jon'});
+  const [dateValue, setDateValue] = useState<DOBManagerT>();
+  const [isModalVisible, setModalVisible] = useState(true);
+  const formattedDate = moment(dateValue).format("DD-MM-YYYY");
+  const close = () => {
+    setModalVisible(false);
+  };
+  const handleAction = () => {
+    close();
   };
   return (
     <ScrollView>
+      <DOBManager
+        handleAction={handleAction}
+        isModalVisible={isModalVisible}
+        dateValue={dateValue}
+        setDateValue={setDateValue}
+      />
       <View style={[styles.contentContainer]}>
-        {/* <ScrollView horizontal={true} style={[styles.flex]}>
-          {carCard.map(({ url, name }: carCardT, index: number) => {
-            return (
-              <GpCard
-                imageStyle={[styles.homeCarCard, styles.ml10]}
-                width={150}
-                height={200}
-                key={index}
-                url={url}
-                iconText={name}
-              />
-            )
-          })}
-        </ScrollView> */}
-        {/* <View style={[styles.mt15, styles.flex, styles.justifyContentEvenly]}>
-          {iconCard.map(({ image, name }, index: number) => {
-            return (
-              <IconCard
-                key={index}
-                imageStyle={[styles.shadowMd]}
-                width={70}
-                height={70}
-                url={image}
-                iconText={name}
-              />
-            );
-          })}
-        </View> */}
-        {/* <View style={[styles.mt30]}>
-          <View style={[styles.flex, styles.justifyContentBetween]}>
-            <GpText style={[styles.textBlack, styles.textLG, styles.semiBold]}>
-              Recommended Vendor
-            </GpText>
-            <TouchableOpacity onPress={viewAllVendor}>
-              <GpText
-                style={[
-                  styles.textBlack,
-                  styles.textMD,
-                  styles.semiBold,
-                  styles.primaryColor,
-                ]}
-              >
-                View All
-              </GpText>
-            </TouchableOpacity>
-          </View>
-          <ScrollView>
-            {vendorCard.map((item: vendorCardT, index: number) => {
-              return <VendorCard key={index} />;
-            })}
-          </ScrollView>
-        </View> */}
-        {/* <View>
-          <BecomeVendor />
-        </View> */}
+        <QpText type={txtHead.heading6}>
+          {dateValue == undefined
+            ? null
+            : "Selected Date Of Birth " + formattedDate}
+        </QpText>
       </View>
     </ScrollView>
   );

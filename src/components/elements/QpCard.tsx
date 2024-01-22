@@ -1,12 +1,12 @@
-import { View, Image } from "react-native"
-import React from "react"
+import { View, Image } from "react-native";
+import React from "react";
 
 // !other import
-import { CardViewT } from "../../utility/types/type"
-import GpText from "./GpText"
-import styles from "../common/styles"
+import { CardViewT } from "../../utility/types/type";
+import QpText from "./QpText";
+import styles from "../common/styles";
 
-export default function GpCard({
+export default function QpCard({
   imageStyle,
   cardStyle,
   width,
@@ -24,11 +24,11 @@ export default function GpCard({
         accessibilityLabel="car"
         resizeMode="cover"
       />
-      <GpText
+      <QpText
         style={[styles.test18, styles.overlayText, styles.overlay, styles.mb_5]}
       >
         {iconText}
-      </GpText>
+      </QpText>
     </View>
-  )
+  );
 }

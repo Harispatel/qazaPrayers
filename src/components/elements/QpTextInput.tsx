@@ -1,19 +1,19 @@
-import React from 'react';
-import {StyleSheet} from 'react-native';
-import {TextInput} from 'react-native-paper';
-import {COLORS} from '../common/colors';
+import React from "react";
+import { StyleSheet } from "react-native";
+import { TextInput } from "react-native-paper";
+import { COLORS } from "../common/colors";
 
-export default function GpTextInput(props) {
+export default function QpTextInput(props) {
   const [height, setHeight] = React.useState(undefined);
-  return props.type == 'textarea' ? (
+  return props.type == "textarea" ? (
     <TextInput
       multiline
       // keyboardType="default"
-      onContentSizeChange={event => {
+      onContentSizeChange={(event) => {
         setHeight(event);
       }}
       {...props}
-      style={[props.style, {backgroundColor: COLORS.TRANSPARENT}]}
+      style={[props.style, { backgroundColor: COLORS.TRANSPARENT }]}
     />
   ) : (
     <TextInput {...props} style={[styles.textInput, props.style]} />
