@@ -1,6 +1,7 @@
 import { STACK } from "../components/common/stackNames";
 
 export type profileListT = {
+  id: number;
   title: string;
   icon: string;
   navigateTo: string;
@@ -26,42 +27,15 @@ export type preferencesListT = {
 
 export const profileList: profileListT[] = [
   {
-    title: "Personal Information",
+    id: 1,
+    title: "Change Date of Birth",
     icon: "person",
     navigateTo: STACK.PERSONAL_INFO,
   },
-  {
-    title: "Notifications",
-    icon: "circle-notifications",
-    navigateTo: STACK.NOTIFICATIONS,
-  },
-];
-
-export const benefitList: benefitListT[] = [
-  {
-    title: "Rewards",
-    icon: "shopping-basket",
-    navigateTo: STACK.HOME_TABS,
-  },
-];
-
-export const supportList: supportListT[] = [
-  {
-    title: "Rate This App",
-    icon: "star-border",
-    navigateTo: STACK.HOME_TABS,
-  },
-  {
-    title: "Become a Vendor",
-    icon: "person-add-alt-1",
-    navigateTo: STACK.VENDOR,
-  },
-];
-
-export const preferencesList: preferencesListT[] = [
-  {
-    title: "City Selection",
-    icon: "location-on",
-    navigateTo: STACK.HOME_TABS,
-  },
+  // {
+  //   id: 2,
+  //   title: "Notifications",
+  //   icon: "circle-notifications",
+  //   navigateTo: STACK.NOTIFICATIONS,
+  // },
 ];

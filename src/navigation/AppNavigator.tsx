@@ -84,11 +84,7 @@ function AppNavigator(): JSX.Element {
         options={{ headerShown: true }}
         component={Profile}
       />
-      <AppStack.Screen
-        name={STACK.PERSONAL_INFO}
-        options={{ headerShown: true }}
-        component={PersonalInfo}
-      />
+
       <AppStack.Screen
         name={STACK.NOTIFICATIONS}
         options={{ headerShown: true }}
