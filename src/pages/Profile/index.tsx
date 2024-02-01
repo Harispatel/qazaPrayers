@@ -27,10 +27,8 @@ const Profile: React.FC = ({ navigation }: any) => {
     designation: "Designation here",
     image: IMAGES.FACEBOOK,
   };
-  const dispatch = useDispatch();
   const handleNavigation = (to) => {
-    // navigation.navigate(to);
-    dispatch(setData({ changeDobModalStatus: true }));
+    navigation.navigate(to);
   };
   return (
     <ScrollView>

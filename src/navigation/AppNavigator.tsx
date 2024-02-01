@@ -1,53 +1,46 @@
-import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
+import React, { useEffect } from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import { STACK } from "../components/common/stackNames";
 
 import { LoginScreen, Otp, Profile, SignupScreen, Home } from "../pages/index";
-import QpIcons from "../components/elements/QpIcons";
-import { COLORS } from "../components/common/colors";
 import { Walkthrough } from "../pages/Walkthrough";
-import PersonalInfo from "../pages/Profile/PersonalInfo";
 import Notifications from "../pages/Profile/Notifications";
+import { createDrawerNavigator } from "@react-navigation/drawer";
+import QpStorage from "../services/storageService";
+import { useDispatch } from "react-redux";
+import { setData } from "../redux/slice";
+import { useDrawerStatus } from "@react-navigation/drawer";
 
+const Drawer = createDrawerNavigator();
+
+// const HandleDOB = () => {
+//   const isDrawerOpen = useDrawerStatus() === "open";
+//   console.log("Function run", isDrawerOpen);
+//   useEffect(() => {
+//     if (isDrawerOpen) {
+//       //yourFunction();
+//       dispatch(setData({ changeDobModalStatus: true }));
+//     }
+//   }, [isDrawerOpen]);
+// };
 function HomeScreenTabs() {
-  const Tab = createBottomTabNavigator();
-
+  const dispatch = useDispatch();
   return (
-    <Tab.Navigator
-      screenOptions={({ route }) => ({
-        tabBarIcon: ({ focused }) => {
-          let iconName = "";
-
-          if (route.name === STACK.HOME) {
-            iconName = focused ? "home-circle" : "home-circle-outline";
-          } else if (route.name === STACK.PROFILE) {
-            iconName = focused ? "account-check" : "account-check-outline";
-          } else if (route.name === STACK.BECOMEMEMBER) {
-            iconName = focused ? "account-convert" : "account-convert-outline";
+    <Drawer.Navigator
+      initialRouteName={STACK.HOME}
+      screenListeners={{
+        drawerItemPress: (e) => {
+          if (e.target?.includes(STACK.DOB_CHANGE)) {
+            dispatch(setData({ changeDobModalStatus: true }));
           }
-          return (
-            <QpIcons
-              style={{ color: focused ? COLORS.GREEN : COLORS.DARK_GREY }}
-              type={"MaterialCommunityIcons"}
-              name={iconName}
-              size={30}
-            />
-          );
         },
-        tabBarActiveTintColor: COLORS.GREEN,
-        tabBarInactiveTintColor: COLORS.DARK_GREY,
-      })}
+      }}
     >
-      <Tab.Screen name={STACK.HOME} component={Home} />
-      <Tab.Screen
-        name={STACK.PROFILE}
-        component={Profile}
-        options={{ headerShown: true }}
-      />
-    </Tab.Navigator>
+      <Drawer.Screen name={STACK.HOME} component={Home} />
+      <Drawer.Screen name={STACK.PROFILE} component={Profile} />
+    </Drawer.Navigator>
   );
 }
 function AppNavigator(): JSX.Element {

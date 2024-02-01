@@ -12,4 +12,5 @@ export const STACK = {
   NOTIFICATIONS: "Notifications",
   BECOMEMEMBER: "Buy Membership",
   VENDOR: "Vendor",
+  DOB_CHANGE: "Change Date of Birth",
 };

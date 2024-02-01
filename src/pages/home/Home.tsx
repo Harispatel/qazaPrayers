@@ -1,49 +1,42 @@
 import { ScrollView, View } from "react-native";
 import React, { useEffect, useState } from "react";
 
-import moment from "moment";
-
-// !other import
+// Components
 import styles from "../../components/common/styles";
 import DOBManager from "../../components/dobManager";
-import { DOBManagerT } from "../../utility/types/type";
-import { QpText } from "../../components/elements";
-import { txtHead } from "../../components/common/constants";
-import QpStorage from "../../services/storageService";
+import { QpButton, QpText } from "../../components/elements";
+import { btnTypes, txtHead } from "../../components/common/constants";
 import MainComponent from "../../components/MainComponent";
-import { useDispatch, useSelector } from "react-redux";
-import { setData } from "../../redux/slice";
+
+import { DOBManagerT } from "../../utility/types/type";
+import QpStorage from "../../services/storageService";
 
 export default function Home({ navigation }: any) {
   const [dateValue, setDateValue] = useState<DOBManagerT>();
-  const dispatch = useDispatch();
-  const [isModalVisible, setModalVisible] = useState();
-  let DOBModalstatus = useSelector((state: any) => state.data);
-  useEffect(() => {
-    if (DOBModalstatus != null) {
-      setModalVisible(DOBModalstatus?.changeDobModalStatus);
-    }
-  }, [DOBModalstatus]);
-  const formattedDate = moment(dateValue).format("DD-MM-YYYY");
-  const close = () => {
-    setModalVisible(false);
-    dispatch(setData({ changeDobModalStatus: false }));
+  const [isModalVisible, setModalVisible] = useState(false);
+
+  const modalStatusChange = async () => {
+    setModalVisible(!isModalVisible);
   };
   const handleAction = async () => {
-    await QpStorage.save("dob", null);
-    close();
-  };
-  const retriveData = async () => {
-    let RetrivedDate = await QpStorage.get("dob");
-    setDateValue(RetrivedDate);
-    if (RetrivedDate !== null) {
-      close();
+    if (dateValue != undefined) {
+      await QpStorage.save("dob", dateValue);
     }
+    modalStatusChange();
   };
-  // const Datesss=AsyncStorage.setItem(key, JSON.stringify(value))
   useEffect(() => {
     retriveData();
   }, []);
+  const retriveData = async () => {
+    let RetrivedDate = await QpStorage.get("dob");
+
+    // Date Of Birth Not Selected so Show Calender Modal
+    if (RetrivedDate == null) {
+      modalStatusChange();
+    }
+    setDateValue(RetrivedDate);
+  };
+  // const Datesss=AsyncStorage.setItem(key, JSON.stringify(value))
 
   return (
     <ScrollView>
@@ -58,8 +51,28 @@ export default function Home({ navigation }: any) {
         <QpText type={txtHead.heading6}>
           {dateValue == undefined
             ? null
-            : "Selected Date Of Birth " + formattedDate}
+            : "Selected Date Of Birth " + dateValue}
         </QpText>
+        <QpButton
+          type={btnTypes.text}
+          style={[styles.buttonDark, styles.mt15]}
+          onPress={() => setModalVisible(!isModalVisible)}
+          btnIcon={undefined}
+          disabled={false}
+          isUpperCase={false}
+        >
+          <QpText
+            style={{
+              ...styles.textBlack,
+              ...styles.buttonDarkText,
+              ...styles.textLG,
+              ...styles.semiBold,
+              ...styles.textUP,
+            }}
+          >
+            Switch
+          </QpText>
+        </QpButton>
       </View>
     </ScrollView>
   );
